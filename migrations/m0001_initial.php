@@ -13,7 +13,7 @@ class m0001_initial{
             password varchar(100) not null,
             name varchar(50) not null,
             phone_number varchar(10) not null,
-            role varchar(10) not null,
+            role varchar(10) default '',
 	        image varchar(50) default ''
         );";
         
