@@ -25,6 +25,10 @@ class UserModel extends Model{
         return $data;
     }
 
+    public function addUser($data){
+        $this->db->table($this->_table)->insert($data);
+    }
+
     // public function insertCart($data){
         // $this->db->table("categories")->insert($data);
         // return $this->db->lastID();
