@@ -10,7 +10,7 @@
                 <div class="text-uppercase fw-bold mb-4">
                   <i class="fas fa-gem me-3"></i> 
                   <img
-                  src="./images/logo_IcedRoast.png"
+                  src="public/assets/images/logo_IcedRoast.png"
                   height="30"
                   weight="40"
                   alt="IcedRoastLogo"
@@ -28,7 +28,7 @@
                     ><i class="fab fa-facebook-f"></i
                   >
                   <img
-                  src="./images/facebook.png"
+                  src="public/assets/images/facebook.png"
                   height="30"
                   weight="40"
                   alt="IcedRoastLogo"
@@ -44,7 +44,7 @@
                     ><i class="fab fa-twitter"></i
                   >
                   <img
-                  src="./images/twitter.png"
+                  src="public/assets/images/twitter.png"
                   height="30"
                   weight="40"
                   alt="IcedRoastLogo"
@@ -60,7 +60,7 @@
                     ><i class="fab fa-google"></i
                   >
                   <img
-                  src="./images/youtube.png"
+                  src="public/assets/images/youtube.png"
                   height="30"
                   weight="40"
                   alt="IcedRoastLogo"
@@ -128,7 +128,7 @@
                 </h6>
                 <p>
                   <img
-                  src="./images/address.png"
+                  src="public/assets/images/address.png"
                   height="30"
                   weight="40"
                   alt="IcedRoastLogo"
@@ -139,7 +139,7 @@
                 <p>
                   <!-- <i class="fas fa-envelope me-3"></i> -->
                   <img
-                  src="./images/email.png"
+                  src="public/assets/images/email.png"
                   height="30"
                   weight="40"
                   alt="IcedRoastLogo"
@@ -149,7 +149,7 @@
                 </p>
                 <!-- <p><i class="fas fa-phone me-3"></i>                 -->
                   <img
-                  src="./images/phonecall.png"
+                  src="public/assets/images/phonecall.png"
                   height="30"
                   weight="40"
                   alt="IcedRoastLogo"
@@ -157,7 +157,7 @@
                 /> + 01 234 567 88</p>
                 <!-- <p><i class="fas fa-print me-3"></i>  -->
                   <img
-                  src="./images/timer.png"
+                  src="public/assets/images/timer.png"
                   height="30"
                   weight="40"
                   alt="IcedRoastLogo"
@@ -174,6 +174,9 @@
         </div>
               <!-- Copyright -->
       </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" 
+      crossorigin="anonymous"></script>
 </body>
 </html>
 
