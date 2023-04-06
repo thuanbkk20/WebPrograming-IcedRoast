@@ -78,17 +78,29 @@ class Site extends Controller{
                 Session::Flash('msg','Đã có lỗi xảy ra! Vui lòng kiểm tra lại');
                 Session::Flash('old',$request->getFields());
             }else{
-                //Tạo user mới
+                //Lấy dữ liệu từ form
                 $new_user = [];
                 $new_user['username'] = $_POST['email'];
                 $new_user['name'] = $_POST['fullname'];
                 $new_user['phone_number'] = $_POST['phone_number'];
-                $new_user['password'] = md5($_POST['password']);
+                $new_user['password'] = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
+                //Tạo user mới
                 $this->userModel->addUser($new_user);
-
                 $response = new Response();
-                $response->reDirect('home');
+
+                $message = "Bạn đã tạo tài khoản thành công, chuyển đến trang đăng nhập?";
+                $url = "/site/login";
+
+                // Generate the JavaScript code for the popup alert and redirect
+                echo '<script>';
+                echo 'if (confirm("' . $message . '")) {';
+                echo '    window.location.href = "' . $url . '";';
+                echo '} else {';
+                echo '    window.location.href = "' . $url . '";';
+                echo '}';
+                echo '</script>';
+                //$response->reDirect('home');
             }
         }
         $this->data['errors'] = Session::Flash('errors');
