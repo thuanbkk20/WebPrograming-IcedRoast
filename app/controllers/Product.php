@@ -21,7 +21,7 @@ class Product extends Controller{
         $this->data['sub_content']['info'] = $product->getDetail($id);
         $this->data['sub_content']['page_title']= "Chi tiết sản phẩm";
         $this->data["content"] = 'products/detail';
-
+        
         //Render view
         $this->render('layouts/client_layout', $this->data);
     }
