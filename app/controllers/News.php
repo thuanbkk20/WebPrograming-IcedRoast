@@ -1,6 +1,7 @@
 <?php
 class News extends Controller{
-    public function category($id){
-        echo "Tin tuc - ".$id;
+    private $data = [];
+    public function index(){
+        $this->render("news", $this->data);
     }
 }
