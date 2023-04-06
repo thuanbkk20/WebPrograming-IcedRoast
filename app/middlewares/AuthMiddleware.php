@@ -2,11 +2,11 @@
 class AuthMiddleware extends Middleware{
     function handle(){
         $model = Load::model('HomeModel');
-        var_dump($model);
         if(Session::data('admin_login')==null){
-            $response = new Response();
-            echo Session::data();
-            echo 'Middleware - handle <pre>';
+            $response = new Response(); 
+            if(!Session::data('user_id')){
+                $response->reDirect('site/login');
+            }
         }
     }
 }
