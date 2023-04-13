@@ -3,7 +3,14 @@ class Site extends Controller{
     public $data=[], $userModel, $userData = [];
     public function __construct()
     {
-        $this->userModel = $this->model("UserModel"); 
+        $this->userModel = $this->model("UserModel");
+        $data['user'] = [];
+        //Lấy user để hiện thông tin trên header
+        if(Session::data('user_id')!=null){
+            $this->db = new Database();
+            $query = $this->db->query("SELECT * FROM user WHERE id = '".Session::data('user_id')."';");
+            $this->data['user'] = $query->fetch(PDO::FETCH_ASSOC);
+        } 
     }
     public function login(){
         $request = new Request();
@@ -47,7 +54,8 @@ class Site extends Controller{
         if($request->isPost()){
             //set rules
             $request->rules([
-                'fullname' => 'required|min:5|max:30',
+                'last_name' => 'required|max:50',
+                'first_name' => 'required|max:50',
                 'phone_number' => 'required|length:10',
                 'email' => 'required|email|min:7|unique:user:username',
                 'password' => 'required|min:3',
@@ -56,9 +64,10 @@ class Site extends Controller{
 
             //set message
             $request->message([
-                'fullname.required' => 'Họ tên không được để trống',
-                'fullname.min' => 'Họ tên phải lớn hơn 5 ký tự',
-                'fullname.max' => 'Họ tên phải bé hơn 30 ký tự',
+                'last_name.required' => 'Họ tên không được để trống',
+                'last_name.max' => 'Họ tên phải bé hơn 50 ký tự',
+                'first_name.required' => 'Họ tên không được để trống',
+                'first_name.max' => 'Họ tên phải bé hơn 50 ký tự',
                 'phone_number.required' => 'Số điện thoại không được để trống',
                 'phone_number.length' => 'Độ dài của số điện thoại là 10',
                 'email.required' => 'Email không được để trống',
@@ -81,13 +90,12 @@ class Site extends Controller{
                 //Lấy dữ liệu từ form
                 $new_user = [];
                 $new_user['username'] = $_POST['email'];
-                $new_user['name'] = $_POST['fullname'];
+                $new_user['first_name'] = $_POST['first_name'];
+                $new_user['last_name'] = $_POST['last_name'];
                 $new_user['phone_number'] = $_POST['phone_number'];
                 $new_user['password'] = password_hash($_POST['password'], PASSWORD_BCRYPT);
-
                 //Tạo user mới
                 $this->userModel->addUser($new_user);
-                $response = new Response();
 
                 $message = "Bạn đã tạo tài khoản thành công, chuyển đến trang đăng nhập?";
                 $url = "/site/login";
@@ -100,7 +108,6 @@ class Site extends Controller{
                 echo '    window.location.href = "' . $url . '";';
                 echo '}';
                 echo '</script>';
-                //$response->reDirect('home');
             }
         }
         $this->data['errors'] = Session::Flash('errors');
@@ -113,13 +120,6 @@ class Site extends Controller{
         Session::delete('user_id');
         $response = new Response();
         $response->reDirect('site/login');
-    }
-
-    public function profile(){
-        
-        $this->data['sub_content']['page_title'] = "Tài khoản của bạn";
-        $this->data["content"] = 'profile';
-        $this->render('layouts/client_layout', $this->data);
     }
 
     public function error(){
