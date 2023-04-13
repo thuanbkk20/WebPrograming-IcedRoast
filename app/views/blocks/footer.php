@@ -103,13 +103,13 @@
                   Tiện ích nhanh
                 </h6>
                 <p>
-                  <a href="#!" class="text-reset">Xem giỏ hàng</a>
+                  <a href=<?php echo _WEB_ROOT.'/profile/cart'?> class="text-reset">Xem giỏ hàng</a>
                 </p>
                 <p>
                   <a href="#!" class="text-reset">Sản phẩm yêu thích</a>
                 </p>
                 <p>
-                  <a href="#!" class="text-reset">Theo dõi đơn hàng</a>
+                  <a href=<?php echo _WEB_ROOT.'/profile/order'?> class="text-reset">Theo dõi đơn hàng</a>
                 </p>
                 <p>
                   <a href="#!" class="text-reset">Xem bài viết</a>
@@ -162,7 +162,7 @@
                   weight="40"
                   alt="IcedRoastLogo"
                   loading="lazy"
-                />7:00 - 21:00, từ thứ 2 - chủ nhật</p>
+                />6:00 - 22:00, từ thứ 2 - chủ nhật</p>
               </div>
               <!-- Grid column -->
             </div>
@@ -170,7 +170,7 @@
           </div>
            <!-- Copyright -->
         <div class="text-center text-dark p-3"  style="background-color: #dd4b39; ">
-           <a class="text-dark" href="https://mdbootstrap.com/">Copyright © 2023 ICED ROAST. All Rights Reserved. </a>
+           <a class="text-dark" href="#">Copyright © 2023 ICED ROAST. All Rights Reserved. </a>
         </div>
               <!-- Copyright -->
       </footer>

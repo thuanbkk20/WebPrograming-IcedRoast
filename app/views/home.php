@@ -1,6 +1,3 @@
-<?php
-  
-?>
       <!-- body -->
       <section class="bg-light navbar-dark">
         <div class="container-fluid " style="padding: 0;margin: 0;">

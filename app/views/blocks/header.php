@@ -35,7 +35,7 @@
   <!-- Collapsible wrapper -->
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <!-- Navbar brand -->
-    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+    <a class="navbar-brand mt-2 mt-lg-0" href=<?php echo _WEB_ROOT; ?>>
       <img
         src=<?php echo _WEB_ROOT.'/public/assets/images/logo_IcedRoast.png';?>
         height="30"
@@ -53,19 +53,19 @@
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">Trang chủ</a> 
+                <a class="nav-link" href=<?php echo _WEB_ROOT; ?>>Trang chủ</a> 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Giới thiệu</a>
+                <a class="nav-link" href='#'?>Giới thiệu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Tin tức</a> 
+                <a class="nav-link" href=<?php echo _WEB_ROOT.'/news'; ?>>Tin tức</a> 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Sản phẩm</a> 
+                <a class="nav-link" href=<?php echo _WEB_ROOT.'/product/list'; ?>>Sản phẩm</a> 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Liên hệ</a> 
+                <a class="nav-link" href=<?php echo _WEB_ROOT.'/contact'; ?>>Liên hệ</a> 
               </li>
             </ul>
             </div>
@@ -98,7 +98,7 @@
               </ul>
               <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  User name
+                  <?php if($first_name) echo $first_name; else echo "User name";?>
                   <img
                   src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
                   class="rounded-circle"
@@ -109,8 +109,8 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="site/logout">Đăng xuất</a></li>
+                  <li><a class="dropdown-item" href=<?php echo _WEB_ROOT."/profile";?>>Thông tin cá nhân</a></li>
+                  <li><a class="dropdown-item" href=<?php echo _WEB_ROOT."/site/logout"?>>Đăng xuất</a></li>
                 </ul>
               </div>
           </div>

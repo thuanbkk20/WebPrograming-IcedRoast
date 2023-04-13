@@ -1,1 +1,0 @@
-<?php echo 'Quản lí tài khoản cá nhân'; ?>
