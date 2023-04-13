@@ -2,11 +2,18 @@
 class Product extends Controller{
 
     public $data = [];
-    public function index(){
-        echo "Danh sách sản phẩm";
+
+    public function __construct(){
+        $data['user'] = [];
+        //Lấy user để hiện thông tin trên header
+        if(Session::data('user_id')!=null){
+            $this->db = new Database();
+            $query = $this->db->query("SELECT * FROM user WHERE id = '".Session::data('user_id')."';");
+            $this->data['user'] = $query->fetch(PDO::FETCH_ASSOC);
+        }
     }
 
-    public function list(){
+    public function index(){
         $product = $this->model("ProductModel");
 
         $this->data['sub_content']['page_title'] = "Danh sach san pham";
