@@ -1,6 +1,6 @@
 <?php
 class Site extends Controller{
-    public $data=[], $userModel;
+    public $data=[], $userModel, $userData = [];
     public function __construct()
     {
         $this->userModel = $this->model("UserModel"); 
@@ -113,6 +113,13 @@ class Site extends Controller{
         Session::delete('user_id');
         $response = new Response();
         $response->reDirect('site/login');
+    }
+
+    public function profile(){
+        
+        $this->data['sub_content']['page_title'] = "Tài khoản của bạn";
+        $this->data["content"] = 'profile';
+        $this->render('layouts/client_layout', $this->data);
     }
 
     public function error(){

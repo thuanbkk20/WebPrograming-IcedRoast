@@ -37,7 +37,7 @@
     <!-- Navbar brand -->
     <a class="navbar-brand mt-2 mt-lg-0" href="#">
       <img
-        src='public/assets/images/logo_IcedRoast.png'
+        src=<?php echo _WEB_ROOT.'/public/assets/images/logo_IcedRoast.png';?>
         height="30"
         weight="40"
         alt="IcedRoastLogo"
@@ -75,7 +75,7 @@
                 <input 
                 class="form-control me-2" 
                 type="text" placeholder="Search">
-                <button class="btn btn-primary" type="submit">Seacrh</button>
+                <button class="btn btn-primary" type="submit">Search</button>
               </form>
             <!-- Icon -->
             <a class="link-secondary me-3" href="#">
@@ -88,7 +88,7 @@
                     <span class="badge badge-pill bg-danger">1</span>
                     <span><i class="fas fa-shopping-cart"></i></span>
                     <img
-                    src="public/assets/images/Giohang.png"
+                    src=<?php echo _WEB_ROOT."/public/assets/images/Giohang.png";?>
                     height="25"
                     alt="Black and White Portrait of a Man"
                     loading="lazy"
@@ -122,7 +122,7 @@
       <section class="bg-light navbar-dark">
         <div class="container-fluid " style="padding: 0;margin: 0;">
           <img
-          src="public/assets/images/Background_home.png"
+          src=<?php echo _WEB_ROOT."/public/assets/images/Background_home.png";?>
           style="height: auto; width: 100%;"
           alt="IcedRoastLogo"
           loading="lazy"

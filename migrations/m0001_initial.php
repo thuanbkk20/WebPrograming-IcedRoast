@@ -65,9 +65,9 @@ class m0001_initial{
         CREATE TABLE news(
             id INT AUTO_INCREMENT,
 	        title varchar(200) not null,
-	        image varchar(50) not null,
-            description varchar(200) not null,
-            link varchar(100) not null,
+	        image varchar(200) not null,
+            description varchar(1000) not null,
+            link varchar(200) not null,
             tag varchar(50) not null,
             primary key (id)
         );

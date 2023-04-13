@@ -6,6 +6,15 @@ class Home extends Controller{
     public function __construct()
     {
         $this->model_home = $this->model("HomeModel"); 
+        $data['user'] = [];
+        //Lấy user để hiện thông tin trên header
+        if(Session::data('user_id')!=null){
+            $this->db = new Database();
+            $query = $this->db->query("SELECT * FROM user WHERE id = '".Session::data('user_id')."';");
+            $data['user'] = $query->fetch(PDO::FETCH_ASSOC);
+        }
+        
+        
     }
 
     public function index(){
