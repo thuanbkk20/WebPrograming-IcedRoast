@@ -1,6 +1,4 @@
-<?php
-    require "app/views/blocks/header1.php";
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -349,6 +347,3 @@
 <!--Main layout-->
 </body>
 </html>
-<?php
-    require "app/views/blocks/footer.php";
-?>
