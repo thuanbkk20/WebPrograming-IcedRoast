@@ -67,7 +67,12 @@
                 <!-- Badge -->
                 <li class="nav-item">
                   <a class="nav-link" href="#">
-                    <span class="badge badge-pill bg-danger">1</span>
+                    <span class="badge badge-pill bg-danger">
+                      <?php
+                        if(!Session::data('cartQuantity')) echo 0;
+                        else echo Session::data('cartQuantity');
+                      ?>
+                    </span>
                     <span><i class="fas fa-shopping-cart"></i></span>
                     <img
                     src=<?php echo _WEB_ROOT."/public/assets/images/Giohang.png";?>
@@ -80,7 +85,7 @@
               </ul>
               <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <?php if($first_name) echo $first_name; else echo "User name";?>
+                  <?php if(!isset($first_name)) echo $first_name; else echo "User name";?>
                   <img
                   src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
                   class="rounded-circle"

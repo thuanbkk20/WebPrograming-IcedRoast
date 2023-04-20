@@ -4,8 +4,9 @@ class Product extends Controller{
     public $data = [], $model;
 
     public function __construct(){
-        $data['user'] = [];
         $this->model['ProductModel'] = $this->model('ProductModel');
+        $this->data['user'] = [];
+        $this->data['user']['first_name'] = 'User';
         //Lấy user để hiện thông tin trên header
         if(Session::data('user_id')!=null){
             $this->db = new Database();

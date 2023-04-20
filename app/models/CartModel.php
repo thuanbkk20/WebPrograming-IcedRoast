@@ -31,7 +31,7 @@ class CartModel extends Model{
 
     public function getCartQuantity($user_id){
         $query = $this->db->query("SELECT sum(quantity) FROM cart WHERE user_id = $user_id");
-        $data = $query->fetch(PDO::FETCH_ASSOC);
+        $data = $query->fetch(PDO::FETCH_ASSOC)['sum(quantity)'];
         return $data;
     }
 }
