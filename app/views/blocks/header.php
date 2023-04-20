@@ -85,8 +85,8 @@
                 <!-- Badge -->
                 <li class="nav-item">
                   <a class="nav-link" href="#">
-                    <span class="badge badge-pill bg-danger">1</span>
-                    <span><i class="fas fa-shopping-cart"></i></span>
+                    
+                    <span><i class="fas fa-shopping-cart"><span class="badge badge-pill bg-danger">1</span></i></span>
                     <img
                     src="public/assets/images/Giohang.png"
                     height="25"
