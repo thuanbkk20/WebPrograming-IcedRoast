@@ -37,14 +37,14 @@ class Product extends Controller{
                 else if($_GET['category']=='other'){
                     $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getChocolate();
                 }
-                else if($_GET['category']=='CaPheVietNam'){
-                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Cà Phê Việt Nam');
+                else if($_GET['category']=='Vietnam_Coffee'){
+                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Vietnam_Coffee');
                 }
-                else if($_GET['category']=='CaPheMay'){
-                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Cà Phê Máy');
+                else if($_GET['category']=='Machine_Coffee'){
+                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Machine_Coffee');
                 }
-                else if($_GET['category']=='ColdBrew'){
-                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Cold Brew');
+                else if($_GET['category']=='Cold_Brew'){
+                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Cold_Brew');
                 }
                 else if($_GET['category']=='CloudFee'){
                     $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('CloudFee');
@@ -52,32 +52,32 @@ class Product extends Controller{
                 else if($_GET['category']=='CloudTea'){
                     $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('CloudTea');
                 }
-                else if($_GET['category']=='TraTraiCay'){
-                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Trà Trái Cây');
+                else if($_GET['category']=='Fruit_Tea'){
+                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Fruit_Tea');
                 }
                 else if($_GET['category']=='Macchiato'){
-                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Trà sữa Macchiato');
+                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Macchiato');
                 }
                 else if($_GET['category']=='HiteaTra'){
-                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Hi-Tea Trà');
+                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Hi-Tea_Tea');
                 }
-                else if($_GET['category']=='HiteaDaTuyet'){
-                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Hi-Tea Đá Tuyết');
+                else if($_GET['category']=='HiteaDa'){
+                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Hi-Tea_Ice');
                 }
-                else if($_GET['category']=='BanhMan'){
-                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Bánh mặn');
+                else if($_GET['category']=='Pastries'){
+                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Pastries');
                 }
-                else if($_GET['category']=='BanhNgot'){
-                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Bánh ngọt');
+                else if($_GET['category']=='Cakes'){
+                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Cakes');
                 }
                 else if($_GET['category']=='Snack'){
                     $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Snack');
                 }
-                else if($_GET['category']=='CaPheTaiNha'){
-                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Cà phê tại nhà');
+                else if($_GET['category']=='Coffee-at-home'){
+                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Coffee-at-home');
                 }
-                else if($_GET['category']=='TraTaiNha'){
-                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Trà tại nhà');
+                else if($_GET['category']=='Tea-at-home'){
+                    $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Tea-at-home');
                 }
                 else if($_GET['category']=='Chocolate'){
                     $this->data['sub_content']['productArr'] = $this->model['ProductModel']->getByCategory('Chocolate');

@@ -29,31 +29,31 @@ class ProductModel extends Model{
     }
 
     public function getCoffee(){
-        $query = $this->db->query("SELECT * FROM product WHERE category ='Cà Phê Việt Nam' OR category ='Cà Phê Máy' OR category ='Cold Brew'");
+        $query = $this->db->query("SELECT * FROM product WHERE category ='Vietnam_Coffee' OR category ='Machine_Coffee' OR category ='Cold_Brew'");
         $data = $query->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
 
     public function getTea(){
-        $query = $this->db->query("SELECT * FROM product WHERE category ='Trà Trái Cây' OR category ='Trà sữa Macchiato'");
+        $query = $this->db->query("SELECT * FROM product WHERE category ='Fruit_Tea' OR category ='Macchiato'");
         $data = $query->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
 
     public function getHitea(){
-        $query = $this->db->query("SELECT * FROM product WHERE category ='Hi-Tea Trà' OR category ='Hi-Tea Đá Tuyết'");
+        $query = $this->db->query("SELECT * FROM product WHERE category ='Hi-Tea_Tea' OR category ='Hi-Tea_Ice'");
         $data = $query->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
 
     public function getCake(){
-        $query = $this->db->query("SELECT * FROM product WHERE category ='Bánh mặn' OR category ='Bánh ngọt' OR category ='Snack'");
+        $query = $this->db->query("SELECT * FROM product WHERE category ='Pastries' OR category ='Cakes' OR category ='Snack'");
         $data = $query->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
 
     public function getAtHome(){
-        $query = $this->db->query("SELECT * FROM product WHERE category ='Cà phê tại nhà' OR category ='Trà tại nhà' OR category ='Snack'");
+        $query = $this->db->query("SELECT * FROM product WHERE category ='Coffee-at-home' OR category ='Tea-at-home' OR category ='Snack'");
         $data = $query->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
