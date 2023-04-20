@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-        $this->render('blocks/header');
+        $this->render('blocks/header',$user);
         $this->render($content, $sub_content);
         $this->render('blocks/footer');
     ?>

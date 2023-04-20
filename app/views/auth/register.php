@@ -5,10 +5,17 @@
 
 <!-- <form method="post" action="<?php echo _WEB_ROOT; ?>/site/register">
     <div>
-        <input type="text" name="fullname" placeholder="Ho ten..." 
-        value="<?php echo (empty($old['fullname'])?false:$old['fullname']);?>"></br>
+        <input type="text" name="first_name" placeholder="Ho ten..." 
+        value="<?php echo (empty($old['first_name'])?false:$old['first_name']);?>"></br>
         <span style="color: red">
-        <?php echo (empty($errors['fullname'])?false:$errors['fullname']); ?>
+        <?php echo (empty($errors['first_name'])?false:$errors['first_name']); ?>
+        </span>
+    </div>
+    <div>
+        <input type="text" name="last_name" placeholder="Ho ten..." 
+        value="<?php echo (empty($old['last_name'])?false:$old['last_name']);?>"></br>
+        <span style="color: red">
+        <?php echo (empty($errors['last_name'])?false:$errors['last_name']); ?>
         </span>
     </div>
     <div>
@@ -68,10 +75,18 @@
                   </span>
                 </div>
                 <div class="form-outline mb-4">
-                  <input type="text" id="name" name="fullname"  placeholder="Họ và tên" class="form-control form-control-lg" 
-                  value="<?php echo (empty($old['fullname'])?false:$old['fullname']);?>"/>
+                  <input type="text" id="name" name="first_name"  placeholder="Tên" class="form-control form-control-lg" 
+                  value="<?php echo (empty($old['first_name'])?false:$old['first_name']);?>"/>
                 <span class="text-danger">
-                    <?php echo (empty($errors['fullname'])?false:$errors['fullname']); ?>
+                    <?php echo (empty($errors['first_name'])?false:$errors['first_name']); ?>
+                </span>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="text" id="name" name="last_name"  placeholder="Họ và tên đệm" class="form-control form-control-lg" 
+                  value="<?php echo (empty($old['last_name'])?false:$old['last_name']);?>"/>
+                <span class="text-danger">
+                    <?php echo (empty($errors['last_name'])?false:$errors['last_name']); ?>
                 </span>
                 </div>
 

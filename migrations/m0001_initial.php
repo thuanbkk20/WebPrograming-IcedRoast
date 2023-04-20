@@ -11,7 +11,8 @@ class m0001_initial{
             id INT PRIMARY KEY AUTO_INCREMENT,
             username varchar(50) not null,
             password varchar(100) not null,
-            name varchar(50) not null,
+            last_name varchar(50) not null,
+            first_name varchar(19) not null,
             phone_number varchar(10) not null,
             role varchar(10) default '',
 	        image varchar(50) default ''
@@ -20,13 +21,13 @@ class m0001_initial{
         DROP TABLE IF EXISTS product;
         CREATE TABLE product(
             id INT AUTO_INCREMENT,
-            name varchar(50) not null,
-            image varchar(50) not null,
-            price varchar(10) not null,
+            name varchar(100) not null,
+            image varchar(200) not null,
+            price INT not null,
             description varchar(500) not null,
-            status varchar(2) not null,
-            category varchar(100) not null,
-            size varchar(1) not null,
+            status varchar(20) not null,
+            category varchar(50) not null,
+            size varchar(1) not null default 'S',
             primary key (id)
         );
         
@@ -47,8 +48,12 @@ class m0001_initial{
         DROP TABLE IF EXISTS cart;
         CREATE TABLE cart(
             id INT AUTO_INCREMENT,
-	        user_id INT UNIQUE not null,
-            product_detail varchar(500),
+	        user_id INT not null,
+            product_id INT not null,
+            name varchar(100) not null,
+            price INT not null,
+            size varchar(2) not null,
+            quantity INT not null default 1,
             primary key (id)
         );
 
@@ -64,10 +69,10 @@ class m0001_initial{
         DROP TABLE IF EXISTS news;
         CREATE TABLE news(
             id INT AUTO_INCREMENT,
-	        title varchar(200) not null,
-	        image varchar(50) not null,
-            description varchar(200) not null,
-            link varchar(100) not null,
+            title varchar(200) not null,
+            image varchar(200) not null,
+            description varchar(1000) not null,
+            link varchar(200) not null,
             tag varchar(50) not null,
             primary key (id)
         );

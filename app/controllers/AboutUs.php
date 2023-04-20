@@ -1,10 +1,10 @@
 <?php
-class contact extends Controller{
+class AboutUs extends Controller{
     public $data = [], $model = [];
 
     public function __construct(){
         //construct
-        $this->data['user']= [];
+        $this->data['user'] = [];
         $this->data['user']['first_name'] = '';
         //Lấy user để hiện thông tin trên header
         if(Session::data('user_id')!=null){
@@ -16,9 +16,9 @@ class contact extends Controller{
 
     public function index(){
         $this->data['sub_content'] = [];
-        $this->data['page_title']= "Liên hệ";
-        $this->data["content"] = 'contact';
-    
+        $this->data['page_title']= "Giới thiệu";
+        $this->data["content"] = 'aboutUs';
+        
         //Render view
         $this->render('layouts/client_layout', $this->data);
     }

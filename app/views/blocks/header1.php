@@ -35,9 +35,9 @@
   <!-- Collapsible wrapper -->
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <!-- Navbar brand -->
-    <a class="navbar-brand mt-2 mt-lg-0" href=<?php echo _WEB_ROOT; ?>>
+    <a class="navbar-brand mt-2 mt-lg-0" href="#">
       <img
-        src=<?php echo _WEB_ROOT.'/public/assets/images/logo_IcedRoast.png';?>
+        src='public/assets/images/logo_IcedRoast.png'
         height="30"
         weight="40"
         alt="IcedRoastLogo"
@@ -53,19 +53,19 @@
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href=<?php echo _WEB_ROOT; ?>>Trang chủ</a> 
+                <a class="nav-link" href="#">Trang chủ</a> 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href=<?php echo _WEB_ROOT.'/aboutUs'; ?>>Giới thiệu</a>
+                <a class="nav-link" href="#">Giới thiệu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href=<?php echo _WEB_ROOT.'/news'; ?>>Tin tức</a> 
+                <a class="nav-link" href="#">Tin tức</a> 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href=<?php echo _WEB_ROOT.'/product'; ?>>Sản phẩm</a> 
+                <a class="nav-link" href="#">Sản phẩm</a> 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href=<?php echo _WEB_ROOT.'/contact'; ?>>Liên hệ</a> 
+                <a class="nav-link" href="#">Liên hệ</a> 
               </li>
             </ul>
             </div>
@@ -75,7 +75,7 @@
                 <input 
                 class="form-control me-2" 
                 type="text" placeholder="Search">
-                <button class="btn btn-primary" type="submit">Search</button>
+                <button class="btn btn-primary" type="submit">Seacrh</button>
               </form>
             <!-- Icon -->
             <a class="link-secondary me-3" href="#">
@@ -85,15 +85,10 @@
                 <!-- Badge -->
                 <li class="nav-item">
                   <a class="nav-link" href="#">
-                    <span class="badge badge-pill bg-danger">
-                      <?php
-                        if(!Session::data('cartQuantity')) echo 0;
-                        else echo Session::data('cartQuantity');
-                      ?>
-                    </span>
+                    <span class="badge badge-pill bg-danger">1</span>
                     <span><i class="fas fa-shopping-cart"></i></span>
                     <img
-                    src=<?php echo _WEB_ROOT."/public/assets/images/Giohang.png";?>
+                    src="public/assets/images/Giohang.png"
                     height="25"
                     alt="Black and White Portrait of a Man"
                     loading="lazy"
@@ -103,7 +98,7 @@
               </ul>
               <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <?php if(!isset($first_name)) echo $first_name; else echo "User name";?>
+                  User name
                   <img
                   src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
                   class="rounded-circle"
@@ -114,11 +109,15 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href=<?php echo _WEB_ROOT."/member/profile";?>>Thông tin cá nhân</a></li>
-                  <li><a class="dropdown-item" href=<?php echo _WEB_ROOT."/site/logout"?>>Đăng xuất</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="site/logout">Đăng xuất</a></li>
                 </ul>
               </div>
           </div>
         </div>
       </nav>
+      <!-- header -->
+
+      <!-- body -->
+      
 </hr>
