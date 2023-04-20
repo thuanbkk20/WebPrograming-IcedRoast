@@ -10,7 +10,7 @@
           <div class="text-uppercase fw-bold mb-4">
             <i class="fas fa-gem me-3"></i> 
             <img
-            src="public/assets/images/logo_IcedRoast.png"
+            src=<?php echo _WEB_ROOT."/public/assets/images/logo_IcedRoast.png"; ?>
             height="30"
             weight="40"
             alt="IcedRoastLogo"
@@ -28,7 +28,7 @@
               ><i class="fab fa-facebook-f"></i
             >
             <img
-            src="public/assets/images/facebook.png"
+            src=<?php echo _WEB_ROOT."/public/assets/images/facebook.png"; ?>
             height="30"
             weight="40"
             alt="IcedRoastLogo"
@@ -44,7 +44,7 @@
               ><i class="fab fa-twitter"></i
             >
             <img
-            src="public/assets/images/twitter.png"
+            src=<?php echo _WEB_ROOT."/public/assets/images/twitter.png"; ?>
             height="30"
             weight="40"
             alt="IcedRoastLogo"
@@ -60,7 +60,7 @@
               ><i class="fab fa-google"></i
             >
             <img
-            src="public/assets/images/youtube.png"
+            src=<?php echo _WEB_ROOT."/public/assets/images/youtube.png"; ?>
             height="30"
             weight="40"
             alt="IcedRoastLogo"
@@ -128,7 +128,7 @@
           </h6>
           <p>
             <img
-            src="public/assets/images/address.png"
+            src=<?php echo _WEB_ROOT."/public/assets/images/address.png";?>
             height="30"
             weight="40"
             alt="IcedRoastLogo"
@@ -139,7 +139,7 @@
           <p>
             <!-- <i class="fas fa-envelope me-3"></i> -->
             <img
-            src="public/assets/images/email.png"
+            src=<?php echo _WEB_ROOT."/public/assets/images/email.png"; ?>
             height="30"
             weight="40"
             alt="IcedRoastLogo"
@@ -149,7 +149,7 @@
           </p>
           <!-- <p><i class="fas fa-phone me-3"></i>                 -->
             <img
-            src="public/assets/images/phonecall.png"
+            src=<?php echo _WEB_ROOT."/public/assets/images/phonecall.png"; ?>
             height="30"
             weight="40"
             alt="IcedRoastLogo"
@@ -157,7 +157,7 @@
           /> + 01 234 567 88</p>
           <!-- <p><i class="fas fa-print me-3"></i>  -->
             <img
-            src="public/assets/images/timer.png"
+            src=<?php echo _WEB_ROOT."/public/assets/images/timer.png"; ?>
             height="30"
             weight="40"
             alt="IcedRoastLogo"
@@ -173,9 +173,7 @@
     <a class="text-dark" href="https://mdbootstrap.com/">Copyright © 2023 ICED ROAST. All Rights Reserved. </a>
   </div>
 </footer>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" 
   crossorigin="anonymous"></script>
-
 
