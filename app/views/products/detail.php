@@ -1,3 +1,4 @@
+
 <!-- Set title -->
 <title><?=
     !empty($page_title)?$page_title:"No name"
@@ -8,8 +9,15 @@
 <?php
     echo '<pre>'; print_r($data); echo '</pre>';
 ?>
-<form action=<?php echo _WEB_ROOT."/member/cart"; ?>>
-
+<form method="post" action=<?php echo _WEB_ROOT."/product/addToCart"; ?>>
+    <input type="hidden" name="product_id" value=<?php echo $data['mainProduct']['id'];?>>
+    <select name="size">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+    </select>
+    <input type="number" name="price" value=<?php echo $data['mainProduct']['price'];?>>
+    <input type="number" name="quantity" value=1>
 <button type="submit">Thêm vào giỏ hàng</button>
 </form>
 

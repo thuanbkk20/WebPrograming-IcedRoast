@@ -4,6 +4,7 @@ class Product extends Controller{
     public $data = [], $model;
 
     public function __construct(){
+        $this->model['CartModel'] = $this->model("CartModel");
         $this->model['ProductModel'] = $this->model('ProductModel');
         $this->data['user'] = [];
         $this->data['user']['first_name'] = 'User';
@@ -94,6 +95,49 @@ class Product extends Controller{
         $request = new Request();
         if($request->isGet()){
             $this->data['sub_content']['mainProduct'] = $this->model['ProductModel']->getProductById($_GET['id']);
+            $category = $this->data['sub_content']['mainProduct']['category'];
+            $this->data['sub_content']['relatedProduct'] = $this->model['ProductModel']->getByCategory($category);
+            $this->data["content"] = 'products/detail';
+            //Render view
+            $this->render('layouts/client_layout', $this->data);
+        }
+    }
+
+    public function addToCart(){
+        //Check xem da dang nhap chua
+        if(!Session::data('user_id')){
+            $response = new Response();
+            $response->reDirect('site/login');
+        }
+        $request = new Request();
+        if($request->isPost()){
+            $product_id = $_POST['product_id'];
+            $size = $_POST['size'];
+            $price = $_POST['price'];
+            $quantity = $_POST['quantity'];
+
+            $productInCart = $this->model['CartModel']->getProductInCart(Session::data('user_id'),$product_id,$size);
+            //Trường hợp trong giỏ hàng chưa có sản phẩm này
+            if(!$productInCart){
+                //
+                $item['user_id'] = Session::data('user_id');
+                $item['product_id'] = $product_id;
+                $item['name'] = $this->model['ProductModel']->getProductName($product_id);
+                $item['price'] = $price;
+                $item['size'] = $size;
+                $item['quantity'] = $quantity;
+                $item['image'] = $this->model['ProductModel']->getProductImage($product_id);
+
+                $this->model['CartModel']->addToCart($item);
+            }else{
+                $item['quantity'] = $quantity + $this->model['CartModel']->getProductQuantity(Session::data('user_id'),$product_id,$size);;
+                $this->model['CartModel']->updateProduct(Session::data('user_id'),$product_id,$size,$item);
+            }
+            //Cập nhật thông tin giỏ hàng trên header
+            $quantity = $this->model['CartModel']->getCartQuantity($this->data['user']['id']);
+            Session::data('cartQuantity',$quantity);
+
+            $this->data['sub_content']['mainProduct'] = $this->model['ProductModel']->getProductById($product_id);
             $category = $this->data['sub_content']['mainProduct']['category'];
             $this->data['sub_content']['relatedProduct'] = $this->model['ProductModel']->getByCategory($category);
             $this->data["content"] = 'products/detail';

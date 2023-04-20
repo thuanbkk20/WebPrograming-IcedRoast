@@ -75,4 +75,16 @@ class ProductModel extends Model{
         $data = $query->fetch(PDO::FETCH_ASSOC);
         return $data;
     }
+
+    public function getProductName($id){
+        $query = $this->db->query("SELECT name FROM product WHERE id =$id");
+        $data = $query->fetch(PDO::FETCH_ASSOC)['name'];
+        return $data;
+    }
+
+    public function getProductImage($id){
+        $query = $this->db->query("SELECT image FROM product WHERE id =$id");
+        $data = $query->fetch(PDO::FETCH_ASSOC)['image'];
+        return $data;
+    }
 }

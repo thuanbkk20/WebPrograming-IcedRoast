@@ -2,9 +2,10 @@
 
 class Home extends Controller{
     
-    public $model_home, $data=[];
+    public $model_home, $data=[], $model;
     public function __construct()
     {
+        $this->model['CartModel'] = $this->model('CartModel');
         $this->model_home = $this->model("HomeModel"); 
         $this->data['user'] = [];
         $this->data['user']['first_name'] = '';
@@ -13,6 +14,12 @@ class Home extends Controller{
             $this->db = new Database();
             $query = $this->db->query("SELECT * FROM user WHERE id = '".Session::data('user_id')."';");
             $this->data['user'] = $query->fetch(PDO::FETCH_ASSOC);
+            ////Cập nhật thông tin giỏ hàng trên header
+            $quantity = $this->model['CartModel']->getCartQuantity(Session::data('user_id'));
+            Session::data('cartQuantity',$quantity);
+        }else{
+            ////Cập nhật thông tin giỏ hàng trên header
+            Session::data('cartQuantity',0);
         }
     }
 
