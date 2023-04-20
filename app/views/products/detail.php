@@ -9,7 +9,7 @@
 <?php
     echo '<pre>'; print_r($data); echo '</pre>';
 ?>
-<form action=<?php echo _WEB_ROOT."/member/cart"; ?>>
+<form method="post" action=<?php echo _WEB_ROOT."/product/addToCart"; ?>>
     <input type="hidden" name="product_id" value=<?php echo $data['mainProduct']['id'];?>>
     <select name="size">
         <option value="S">S</option>
