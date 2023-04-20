@@ -79,7 +79,7 @@ class Database{
         }catch(Exception $exception){
             $mess = $exception->getMessage();
             $data['message'] = $mess;
-            APP::$app->loadError('database', $data);
+            App::$app->loadError('database', $data);
             die();
         }
     }

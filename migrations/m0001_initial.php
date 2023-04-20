@@ -69,8 +69,8 @@ class m0001_initial{
         DROP TABLE IF EXISTS news;
         CREATE TABLE news(
             id INT AUTO_INCREMENT,
-	        title varchar(200) not null,
-	        image varchar(200) not null,
+            title varchar(200) not null,
+            image varchar(200) not null,
             description varchar(1000) not null,
             link varchar(200) not null,
             tag varchar(50) not null,
