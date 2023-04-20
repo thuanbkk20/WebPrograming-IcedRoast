@@ -1,53 +1,3 @@
-<!-- <?php 
-
-    // echo (empty($msg)?false:$msg);
-?> -->
-
-<!-- <form method="post" action="<?php echo _WEB_ROOT; ?>/site/register">
-    <div>
-        <input type="text" name="first_name" placeholder="Ho ten..." 
-        value="<?php echo (empty($old['first_name'])?false:$old['first_name']);?>"></br>
-        <span style="color: red">
-        <?php echo (empty($errors['first_name'])?false:$errors['first_name']); ?>
-        </span>
-    </div>
-    <div>
-        <input type="text" name="last_name" placeholder="Ho ten..." 
-        value="<?php echo (empty($old['last_name'])?false:$old['last_name']);?>"></br>
-        <span style="color: red">
-        <?php echo (empty($errors['last_name'])?false:$errors['last_name']); ?>
-        </span>
-    </div>
-    <div>
-        <input type="text" name="phone_number" placeholder="So dien thoai" 
-        value="<?php echo (empty($old['phone_number'])?false:$old['phone_number']);?>"></br>
-        <span style="color: red">
-        <?php echo (empty($errors['phone_number'])?false:$errors['phone_number']); ?>
-        </span>
-    </div>
-    <div>
-        <input type="text" name="email" placeholder="Email"
-        value="<?php echo (empty($old['email'])?false:$old['email']);?>"></br>
-        <span style="color: red">
-        <?php echo (empty($errors['email'])?false:$errors['email']); ?>
-        </span>
-    </div>
-    <div>
-        <input type="password" name="password" placeholder="Password"
-        value="<?php echo (empty($old['password'])?false:$old['password']);?>"></br>
-        <span style="color: red">
-        <?php echo (empty($errors['password'])?false:$errors['password']); ?>
-        </span>
-    </div>
-    <div>
-        <input type="password" name="confirm_password" placeholder="Confirm Password"
-        value="<?php echo (empty($old['confirm_password'])?false:$old['confirm_password']);?>"></br>
-        <span style="color: red">
-        <?php echo (empty($errors['confirm_password'])?false:$errors['confirm_password']); ?>
-        </span>
-    </div> 
-    <button type="submit">Submit</button>
-</form> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +13,7 @@
   <div class="mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container-fluid h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6" style="opacity: 90%;">
           <div class="card" style="border-radius: 15px;">
             <div class="card-body p-4">
               <h2 class="text-uppercase text-center mb-5">Tạo tài khoản</h2>
@@ -122,7 +72,7 @@
 
                 <div class="d-flex justify-content-center">
                   <button type="submit"
-                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Đăng kí</button>
+                    class="btn btn-block btn-lg gradient-custom-4" style="background-color: rgb(111, 78, 55); color: white;">Đăng ký</button>
                 </div>
 
                 <p class="text-center text-muted mt-5 mb-0">Bạn đã có tài khoản? <a href="#!"
@@ -139,3 +89,53 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" 
       crossorigin="anonymous"></script>
 </body>
+
+<!-- <?php 
+    // echo (empty($msg)?false:$msg);
+    ?> -->
+
+<!-- <form method="post" action="<?php echo _WEB_ROOT; ?>/site/register">
+    <div>
+        <input type="text" name="first_name" placeholder="Ho ten..." 
+        value="<?php echo (empty($old['first_name'])?false:$old['first_name']);?>"></br>
+        <span style="color: red">
+        <?php echo (empty($errors['first_name'])?false:$errors['first_name']); ?>
+        </span>
+    </div>
+    <div>
+        <input type="text" name="last_name" placeholder="Ho ten..." 
+        value="<?php echo (empty($old['last_name'])?false:$old['last_name']);?>"></br>
+        <span style="color: red">
+        <?php echo (empty($errors['last_name'])?false:$errors['last_name']); ?>
+        </span>
+    </div>
+    <div>
+        <input type="text" name="phone_number" placeholder="So dien thoai" 
+        value="<?php echo (empty($old['phone_number'])?false:$old['phone_number']);?>"></br>
+        <span style="color: red">
+        <?php echo (empty($errors['phone_number'])?false:$errors['phone_number']); ?>
+        </span>
+    </div>
+    <div>
+        <input type="text" name="email" placeholder="Email"
+        value="<?php echo (empty($old['email'])?false:$old['email']);?>"></br>
+        <span style="color: red">
+        <?php echo (empty($errors['email'])?false:$errors['email']); ?>
+        </span>
+    </div>
+    <div>
+        <input type="password" name="password" placeholder="Password"
+        value="<?php echo (empty($old['password'])?false:$old['password']);?>"></br>
+        <span style="color: red">
+        <?php echo (empty($errors['password'])?false:$errors['password']); ?>
+        </span>
+    </div>
+    <div>
+        <input type="password" name="confirm_password" placeholder="Confirm Password"
+        value="<?php echo (empty($old['confirm_password'])?false:$old['confirm_password']);?>"></br>
+        <span style="color: red">
+        <?php echo (empty($errors['confirm_password'])?false:$errors['confirm_password']); ?>
+        </span>
+    </div> 
+    <button type="submit">Submit</button>
+</form> -->
