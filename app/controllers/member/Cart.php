@@ -33,5 +33,26 @@ class Cart extends Controller{
     public function delete(){
         $request = new Request();
         // Delete product in cart
+        if($request->isGet()){
+            $id = $_GET['id'];
+            $this->model['CartModel']->deleteProductInCart($id);
+        }
+        $reponse = new Response();
+        $reponse->reDirect('member/cart');
+    }
+
+    public function updateQuantity(){
+        $request = new Request();
+        // Delete product in cart
+        if($request->isGet()){
+            $id = $_GET['id'];
+            if($_GET['sign']=='-'){
+                $this->model['CartModel']->updateQuantity($id,'desrease');
+            }else{
+                $this->model['CartModel']->updateQuantity($id,'increase');
+            }
+        }
+        $reponse = new Response();
+        $reponse->reDirect('member/cart');
     }
 }
