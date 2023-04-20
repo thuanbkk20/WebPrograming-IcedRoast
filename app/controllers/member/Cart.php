@@ -5,12 +5,13 @@ class Cart extends Controller{
     public function __construct(){
         $this->model['CartModel'] = $this->model("CartModel");
         $this->model['userModel'] = $this->model("UserModel");
+        $this->model['ProductModel'] = $this->model("ProductModel");
 
-        $data['cart'] = $this->model['CartModel']->getUserCart($this->data['user']['id']);
+        $data['cart'] = $this->model['CartModel']->getUserCart(Session::data('user_id'));
         if(!$data['cart']){
             Session::data('cartQuantity',0);
         }else{
-            $quantity = $this->model['CartModel']->getCartQuantity($this->data['user']['id']);
+            $quantity = $this->model['CartModel']->getCartQuantity(Session::data('user_id'));
             Session::data('cartQuantity',$quantity);
         }
         $data['user'] = [];
@@ -24,9 +25,13 @@ class Cart extends Controller{
 
     public function index(){
         $cart = $this->model['CartModel']->getUserCart($this->data['user']['id']);
-        var_dump($cart);
-        $this->data["sub_content"] = [];
+        $this->data["sub_content"]['cart'] = $cart;
         $this->data["content"] = 'cart';
         $this->render('layouts/client_layout', $this->data);
+    }
+
+    public function delete(){
+        $request = new Request();
+        // Delete product in cart
     }
 }

@@ -1,6 +1,6 @@
 <!-- <h1>Hồ Sơ Của Tôi</h1>
 <p>Quản lý thông tin hồ sơ để bảo mật tài khoản</p>
-<form method="post" action="<?php echo _WEB_ROOT; ?>/profile">
+<form method="post" action="<?php echo _WEB_ROOT; ?>/member/profile">
     <div>
         Tên đăng nhập: <?php echo $user['username'];?>
     </div>

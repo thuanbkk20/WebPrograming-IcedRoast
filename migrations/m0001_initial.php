@@ -50,6 +50,7 @@ class m0001_initial{
             id INT AUTO_INCREMENT,
 	        user_id INT not null,
             product_id INT not null,
+            image varchar(200) not null,
             name varchar(100) not null,
             price INT not null,
             size varchar(2) not null,

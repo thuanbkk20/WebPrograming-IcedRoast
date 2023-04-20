@@ -1,4 +1,4 @@
-<form method="post" action="<?php echo _WEB_ROOT; ?>/profile/change_password">
+<form method="post" action="<?php echo _WEB_ROOT; ?>/member/profile/change_password">
     <div>
         <h1>Đổi Mật Khẩu</h1>
         <p>Để bảo mật tài khoản, vui lòng không chia sẻ mật khẩu cho người khác</p>

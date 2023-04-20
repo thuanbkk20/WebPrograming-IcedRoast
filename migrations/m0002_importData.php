@@ -8,6 +8,90 @@ class m0002_importData{
         INSERT INTO user
         VALUES (1,"admin@gmail.com","$2y$10$kR3IBZ4Aunux/zENSwsLremmklA5x.iJT4nXlRPlYCeGjeleRfJ4i","Nguyen","Thuan","0123456789","admin","");
         
+        INSERT INTO icedroast.news (title, image, description, link, tag)
+        VALUES
+
+        ("CÀ PHÊ SỮA ESPRESSO THE COFFEE HOUSE - BẬT LON BẬT VỊ NGON", 
+        "https://file.hstatic.net/1000075078/article/1__3__ec2969cff66c462d8d29959f1456bc08_master.jpg",
+        "Cà phê sữa Espresso là một lon cà phê sữa giải khát với hương vị...",
+        "CÀ PHÊ SỮA ESPRESSO THE COFFEE HOUSE - BẬT LON BẬT VỊ NGON – The Coffee House",
+        "coffeeholic"),
+
+        ("SIGNATURE - BIỂU TƯỢNG VĂN HOÁ CÀ PHÊ CỦA THE COFFEE HOUSE ĐÃ QUAY TRỞ LẠI",
+        "https://file.hstatic.net/1000075078/article/3__1__2b67342f4db64bb082944cf078afd910_master.jpg",
+        "Mới đây, các \"tín đồ\" cà phê đang bàn tán xôn xao về SIGNATURE -...",
+        "https://thecoffeehouse.com/blogs/coffeeholic/signature-the-coffee-house-da-quay-tro-lai",
+        "coffeeholic"),
+
+        ("UỐNG GÌ KHI TỚI SIGNATURE BY THE COFFEE HOUSE?",
+        "https://file.hstatic.net/1000075078/article/_dsc2358_5075c84b1b114f72b968dad9e9e9ceaa_master.jpg",
+        "Vừa qua, The Coffee House chính thức khai trương cửa hàng SIGNATURE by The Coffee...",
+        "https://thecoffeehouse.com/blogs/coffeeholic/uong-gi-khi-toi-signature-by-the-coffee-house",
+        "coffeeholic"),
+
+        ("CÁCH NHẬN BIẾT HƯƠNG VỊ CÀ PHÊ ROBUSTA NGUYÊN CHẤT DỄ DÀNG NHẤT", 
+        "https://file.hstatic.net/1000075078/article/thecoffehouse_ca_phe_01_b4adbd88db6e4ca3b7c2c5934d1a1ed9_master.jpg",
+        "Cùng Arabica, Robusta cũng là loại cà phê nổi tiếng được sử dụng phổ biến...",
+        "https://thecoffeehouse.com/blogs/coffeeholic/cach-nhan-biet-huong-vi-ca-phe-robusta-nguyen-chat-de-dang-nhat",
+        "coffeeholic"),
+
+        ("BẬT MÍ NHIỆT ĐỘ LÝ TƯỞNG ĐỂ PHA CÀ PHÊ NGON, ĐẬM ĐÀ HƯƠNG VỊ", 
+        "https://file.hstatic.net/1000075078/article/thecoffeehouse_caphe_7_db8def55acbf426ea725921529f6f01e_master.jpg",
+        "Nhiệt độ nước là một yếu tố quan trọng để có thể tạo nên những....",
+        "https://thecoffeehouse.com/blogs/coffeeholic/bat-mi-nhiet-do-ly-tuong-de-pha-ca-phe-ngon-dam-da-huong-vi",
+        "coffeeholic"),
+
+        ("BỘ SƯU TẬP CẦU TOÀN KÈO THƠM: \"VÍA\" MAY MẮN KHÔNG THỂ BỎ LỠ TẾT NÀY", "https://file.hstatic.net/1000075078/article/cautoankeothom_thecoffeehouse_03_29cd435c9a574e1a867ac36f2c863bb6_master.jpg",
+        "Tết này vẫn giống Tết xưa, không hề mai một nét văn hoá truyền thống...",
+        "https://thecoffeehouse.com/blogs/teaholic/bo-suu-tap-cau-toan-keo-thom-via-may-man-khong-the-bo-lo-tet-nay",
+        "teaholic"),
+
+        ("\"KHUẤY ĐỂ THẤY TRĂNG\" - KHUẤY LÊN NIỀM HẠNH PHÚC: TRẢI NGHIỆM KHÔNG THỂ BỎ LỠ MÙA TRUNG THU NÀY", "https://file.hstatic.net/1000075078/article/dscf0216_2890bcca44ae49aaaf843d5fa3db2fc6_master.jpg",
+        "Năm 2022 là năm đề cao sức khỏe tinh thần nên giới trẻ muốn tận...",
+        "https://thecoffeehouse.com/blogs/teaholic/khuay-de-thay-trang-trung-thu-nay",
+        "teaholic"),
+
+        ("\"KHUẤY ĐỂ THẤY TRĂNG\" - HOT TREND MỞ MÀN MÙA TRUNG THU HẤP DẪN ĐÔNG ĐẢO GIỚI TRẺ", 
+        "https://file.hstatic.net/1000075078/article/dscf0216_2890bcca44ae49aaaf843d5fa3db2fc6_master.jpg",
+        "”Khuấy để thấy trăng” - trải nghiệm “ có 1 không 2” được The Coffee...",
+        "https://thecoffeehouse.com/blogs/teaholic/khuay-de-thay-trang-hot-trend-mo-man-mua-trung-thu-hap-dan-dong-da",
+        "teaholic"),
+
+        ("UỐNG TRÀ HIBISCUS CÓ BỊ MẤT NGỦ HAY KHÔNG?", "https://file.hstatic.net/1000075078/article/thecoffeehouse_hiteahealthy_03_89263a1a922e4813a894c245b1145b7f_master.png",
+        "Trà hoa Hibiscus luôn nằm trong top những loại trà healthy được nhiều người ưa...",
+        "https://thecoffeehouse.com/blogs/teaholic/uong-tra-hibiscus-co-bi-mat-ngu-hay-khong",
+        "teaholic"),
+
+        ("10 LỢI ÍCH KHÔNG NGỜ CỦA TRÀ HOA HIBISCUS", "https://file.hstatic.net/1000075078/article/pr-cover_41de066c6f654ee9b318dbffe7e5e5f0_master.jpg",
+        "Với rất nhiều lợi ích vượt trội, trà hoa Hibiscus được nhiều chị em ưu...",
+        "https://thecoffeehouse.com/blogs/teaholic/10-loi-ich-khong-ngo-cua-tra-hoa-hibiscus",
+        "teaholic"),
+
+        ("SIGNATURE BY THE COFFEE HOUSE - \"DẤU ẤN\" MỚI CỦA NHÀ CÀ PHÊ", "https://file.hstatic.net/1000075078/article/signaturebythecoffeehouse_03_16b2ab7101e14d62835a4b231e73b65d_master.jpg",
+        "Ngày 11.01.2023, Chuỗi The Coffee House thông báo cửa hàng SIGNATURE by The Coffee House...",
+        "https://thecoffeehouse.com/blogs/blog/signature-by-the-coffee-house-dau-an-moi-cua-nha-ca-phe",
+        "blog"),
+        ("CHIẾC LY ĐỔI MÀU \"NGÀN NGƯỜI THEO ĐUỔI\" ĐÃ QUAY TRỞ LẠI, LẸ CH N BẮT TREND NGAY KẺO TIẾC", "https://file.hstatic.net/1000075078/article/dscf6292_d784e8350a0942c1965127ecf57587ee_master.jpg",
+        "Bộ sản phẩm Trà sữa Merry CloudTea trong chiếc ly đổi màu từ The Coffee...",
+        "https://thecoffeehouse.com/blogs/blog/chiec-ly-doi-mau-ngan-nguoi-theo-duoi-da-quay-tro-lai",
+        "blog"),
+
+        ("CŨNG LÀ ĂN BÁNH, THƯỞNG TRÀ, NGẮM TRĂNG - GEN Z LÀM GÌ CHO BỚT NHẠT?", "https://file.hstatic.net/1000075078/article/z3663478710700_0f36930c9ad300ade688f7ed1ddbd4f8_ceb536831696441fa7e8d9a2ad990c44_master.jpg",
+        "Trung thu là dịp mà bất kỳ ai cũng có thể \"bé lại\" để niềm...",
+        "https://thecoffeehouse.com/blogs/blog/gen-z-trung-thu-lam-gi-cho-bot-nhat",
+        "blog"),
+
+        ("LỄ TÌNH NH N, CÙNG CRUSH ĐI Đ U?", "https://file.hstatic.net/1000075078/article/123232891_2820303564910318_4578047210373311456_n_699bea2973ec4087886ab888d5434de4_master.jpg",
+        "Tadaaaa, hết Tết thì Valentine đầy yêu thương lại đang đến rồi nè. Lễ tình....",
+        "https://thecoffeehouse.com/blogs/blog/le-tinh-nhan-cung-crush-di-dau",
+        "blog"),
+
+        ("CHAI FRESH LUÔN BÊN BẠN TRONG MỌI KHOẢNH KHẮC", "https://file.hstatic.net/1000075078/article/tch206857_stacking_d4325b7f7a5945d7b2abee4eb7ad51d5_master.jpg",
+        "Với sự kết nối của The Coffee House, những thức trà và cà phê dạng...",
+        "https://thecoffeehouse.com/blogs/blog/chai-fresh-luon-ben-ban-trong-moi-khoanh-khac",
+        "blog");
+
+
         INSERT INTO icedroast.product (name, image, price, description, status, category, size)
         VALUES
 
