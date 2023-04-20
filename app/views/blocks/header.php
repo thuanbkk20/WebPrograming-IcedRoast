@@ -85,7 +85,7 @@
               </ul>
               <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  <?php if(!isset($first_name)) echo $first_name; else echo "User name";?>
+                  <?php if(isset($first_name)) echo $first_name; else echo "User name";?>
                   <img
                   src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
                   class="rounded-circle"

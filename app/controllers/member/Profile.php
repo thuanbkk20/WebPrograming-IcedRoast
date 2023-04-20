@@ -50,7 +50,7 @@ class Profile extends Controller{
                 $this->model['userModel']->updateUser($new_user);
 
                 $message = "Bạn đã thay đổi thông tin cá nhân thành công!";
-                $url = _WEB_ROOT."/profile";
+                $url = _WEB_ROOT."/member/profile";
 
                 // Generate the JavaScript code for the popup alert and redirect
                 echo '<script>';
