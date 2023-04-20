@@ -5,13 +5,6 @@ class Site extends Controller{
     {
         $this->model['userModel'] = $this->model("userModel");
         $this->model['CartModel'] = $this->model("CartModel");
-        $data['user'] = [];
-        //Lấy user để hiện thông tin trên header
-        if(Session::data('user_id')!=null){
-            $this->db = new Database();
-            $query = $this->db->query("SELECT * FROM user WHERE id = '".Session::data('user_id')."';");
-            $this->data['user'] = $query->fetch(PDO::FETCH_ASSOC);
-        } 
     }
     public function login(){
         $request = new Request();
@@ -40,6 +33,21 @@ class Site extends Controller{
                 //Trường hợp đăng nhập thành công   
                 $userID = $this->model['userModel']->getUserID($_POST['email'])['id'];
                 Session::data('user_id',$userID);
+
+                //Lấy user để hiện thông tin trên header
+                if(Session::data('user_id')!=null){
+                    $this->db = new Database();
+                    $query = $this->db->query("SELECT * FROM user WHERE id = '".Session::data('user_id')."';");
+                    $this->data['user'] = $query->fetch(PDO::FETCH_ASSOC);
+                } 
+
+                //Thêm thông tin giỏ hàng vào session
+                $quantity = $this->model['CartModel']->getCartQuantity($this->data['user']['id']);
+                if(!$quantity){
+                    Session::data('cartQuantity',0);
+                }else{
+                    Session::data('cartQuantity',$quantity);
+                }
                 $response = new Response();
                 $response->reDirect('home');
             } 

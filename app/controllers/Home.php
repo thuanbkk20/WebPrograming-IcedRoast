@@ -6,7 +6,8 @@ class Home extends Controller{
     public function __construct()
     {
         $this->model_home = $this->model("HomeModel"); 
-        $data['user'] = [];
+        $this->data['user'] = [];
+        $this->data['user']['first_name'] = '';
         //Lấy user để hiện thông tin trên header
         if(Session::data('user_id')!=null){
             $this->db = new Database();
