@@ -5,7 +5,5 @@
 
 <h1 style="text-align: center">PRODUCTS LIST</h1>
 <?php
-    echo '<pre>';
-    print_r($product_list);
-    echo '</pre>';
+    echo '<pre>'; print_r($productArr); echo '</pre>';
 ?>

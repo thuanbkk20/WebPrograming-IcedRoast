@@ -21,13 +21,13 @@ class m0001_initial{
         DROP TABLE IF EXISTS product;
         CREATE TABLE product(
             id INT AUTO_INCREMENT,
-            name varchar(50) not null,
-            image varchar(50) not null,
-            price varchar(10) not null,
+            name varchar(100) not null,
+            image varchar(200) not null,
+            price INT not null,
             description varchar(500) not null,
-            status varchar(2) not null,
-            category varchar(100) not null,
-            size varchar(1) not null,
+            status varchar(20) not null,
+            category varchar(50) not null,
+            size varchar(1) not null default 'S',
             primary key (id)
         );
         
@@ -48,8 +48,12 @@ class m0001_initial{
         DROP TABLE IF EXISTS cart;
         CREATE TABLE cart(
             id INT AUTO_INCREMENT,
-	        user_id INT UNIQUE not null,
-            product_detail varchar(500),
+	        user_id INT not null,
+            product_id INT not null,
+            name varchar(100) not null,
+            price INT not null,
+            size varchar(2) not null,
+            quantity INT not null default 1,
             primary key (id)
         );
 

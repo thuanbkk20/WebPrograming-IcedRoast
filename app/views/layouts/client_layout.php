@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="/public/assets/css/style.css">
-    <title><?php if($page_title!=null) echo $page_title; else echo 'IcedRoast'; ?></title>
 </head>
 <body>
     <?php

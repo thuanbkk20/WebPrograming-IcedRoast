@@ -1,9 +1,10 @@
 <?php
 class Site extends Controller{
-    public $data=[], $userModel, $userData = [];
+    public $data=[], $model, $userData = [];
     public function __construct()
     {
-        $this->userModel = $this->model("UserModel");
+        $this->model['userModel'] = $this->model("userModel");
+        $this->model['CartModel'] = $this->model("CartModel");
         $data['user'] = [];
         //Lấy user để hiện thông tin trên header
         if(Session::data('user_id')!=null){
@@ -37,7 +38,7 @@ class Site extends Controller{
                 Session::Flash('old',$request->getFields());
             }else{
                 //Trường hợp đăng nhập thành công   
-                $userID = $this->userModel->getUserID($_POST['email'])['id'];
+                $userID = $this->model['userModel']->getUserID($_POST['email'])['id'];
                 Session::data('user_id',$userID);
                 $response = new Response();
                 $response->reDirect('home');
@@ -95,7 +96,7 @@ class Site extends Controller{
                 $new_user['phone_number'] = $_POST['phone_number'];
                 $new_user['password'] = password_hash($_POST['password'], PASSWORD_BCRYPT);
                 //Tạo user mới
-                $this->userModel->addUser($new_user);
+                $this->model['userModel']->addUser($new_user);
 
                 $message = "Bạn đã tạo tài khoản thành công, chuyển đến trang đăng nhập?";
                 $url = "/site/login";

@@ -1,0 +1,24 @@
+<?php
+class AboutUs extends Controller{
+    public $data = [], $model = [];
+
+    public function __construct(){
+        //construct
+        $data['user'] = [];
+        //Lấy user để hiện thông tin trên header
+        if(Session::data('user_id')!=null){
+            $this->db = new Database();
+            $query = $this->db->query("SELECT * FROM user WHERE id = '".Session::data('user_id')."';");
+            $this->data['user'] = $query->fetch(PDO::FETCH_ASSOC);
+        }
+    }
+
+    public function index(){
+        $this->data['sub_content'] = [];
+        $this->data['page_title']= "Giới thiệu";
+        $this->data["content"] = 'aboutUs';
+        
+        //Render view
+        $this->render('layouts/client_layout', $this->data);
+    }
+}

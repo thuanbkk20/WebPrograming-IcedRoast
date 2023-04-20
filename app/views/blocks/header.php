@@ -56,13 +56,13 @@
                 <a class="nav-link" href=<?php echo _WEB_ROOT; ?>>Trang chủ</a> 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href='#'?>Giới thiệu</a>
+                <a class="nav-link" href=<?php echo _WEB_ROOT.'/aboutUs'; ?>>Giới thiệu</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href=<?php echo _WEB_ROOT.'/news'; ?>>Tin tức</a> 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href=<?php echo _WEB_ROOT.'/product/list'; ?>>Sản phẩm</a> 
+                <a class="nav-link" href=<?php echo _WEB_ROOT.'/product'; ?>>Sản phẩm</a> 
               </li>
               <li class="nav-item">
                 <a class="nav-link" href=<?php echo _WEB_ROOT.'/contact'; ?>>Liên hệ</a> 
@@ -109,7 +109,7 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href=<?php echo _WEB_ROOT."/profile";?>>Thông tin cá nhân</a></li>
+                  <li><a class="dropdown-item" href=<?php echo _WEB_ROOT."/member/profile";?>>Thông tin cá nhân</a></li>
                   <li><a class="dropdown-item" href=<?php echo _WEB_ROOT."/site/logout"?>>Đăng xuất</a></li>
                 </ul>
               </div>
