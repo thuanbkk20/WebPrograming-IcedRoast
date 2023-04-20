@@ -66,7 +66,7 @@
             <ul class="navbar-nav">
                 <!-- Badge -->
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
+                  <a class="nav-link" href=<?php echo _WEB_ROOT.'/member/cart';?>>
                     <span class="badge badge-pill bg-danger">
                       <?php
                         if(!Session::data('cartQuantity')) echo 0;

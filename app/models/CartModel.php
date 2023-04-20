@@ -54,4 +54,16 @@ class CartModel extends Model{
     public function updateProduct($user_id, $product_id, $size, $data){
         $this->db->table($this->_table)->where('user_id','=',$user_id)->where('product_id','=',$product_id)->where('size','=',$size)->update($data);
     }
+
+    public function deleteProductInCart($id){
+        $this->db->query("DELETE FROM cart WHERE id = $id");
+    }
+
+    public function updateQuantity($id,$type){
+        if($type == 'increase'){
+            $this->db->query("UPDATE cart SET quantity = quantity + 1 WHERE id = $id");
+        }else if($type == 'desrease'){
+            $this->db->query("UPDATE cart SET quantity = quantity - 1 WHERE id = $id");
+        }
+    }
 }
