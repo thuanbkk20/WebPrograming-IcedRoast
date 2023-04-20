@@ -22,6 +22,4 @@ class HomeModel extends Model{
     {
         return "id";
     }
-
-    
 }
