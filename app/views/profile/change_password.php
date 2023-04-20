@@ -1,4 +1,4 @@
-<form method="post" action="<?php echo _WEB_ROOT; ?>/member/profile/change_password">
+<!-- <form method="post" action="<?php echo _WEB_ROOT; ?>/member/profile/change_password">
     <div>
         <h1>Đổi Mật Khẩu</h1>
         <p>Để bảo mật tài khoản, vui lòng không chia sẻ mật khẩu cho người khác</p>
@@ -20,7 +20,7 @@
         </span>
     </div> 
     <button type="submit">Lưu</button>
-</form>
+</form> -->
 
 <div class="container">
     <div class="row g-0 page-body mx-1 p-2 m-2">
@@ -87,7 +87,7 @@
                         <span>Để bảo mật tài khoản, vui lòng không chia sẻ mật khẩu cho người</span>
                     </div>
 
-                    <form method="post" action="<?php echo _WEB_ROOT; ?>/profile/change_password">
+                    <form method="post" action="<?php echo _WEB_ROOT; ?>/member/profile/change_password">
                                 <div class="form-group row">
                                         <label for="password"class="col-2 col-form-label">Mật khẩu</label>
                                     <div class="col-10">
