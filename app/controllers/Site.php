@@ -40,14 +40,10 @@ class Site extends Controller{
                     $query = $this->db->query("SELECT * FROM user WHERE id = '".Session::data('user_id')."';");
                     $this->data['user'] = $query->fetch(PDO::FETCH_ASSOC);
                 } 
-
-                //Thêm thông tin giỏ hàng vào session
+                //Cập nhật thông tin giỏ hàng trên header
                 $quantity = $this->model['CartModel']->getCartQuantity($this->data['user']['id']);
-                if(!$quantity){
-                    Session::data('cartQuantity',0);
-                }else{
-                    Session::data('cartQuantity',$quantity);
-                }
+                Session::data('cartQuantity',$quantity);
+
                 $response = new Response();
                 $response->reDirect('home');
             } 
@@ -127,6 +123,7 @@ class Site extends Controller{
 
     public function logout(){
         Session::delete('user_id');
+        Session::delete('cartQuantity');
         $response = new Response();
         $response->reDirect('site/login');
     }
