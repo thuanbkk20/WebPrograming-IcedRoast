@@ -1,0 +1,86 @@
+svg {
+    vertical-align: baseline !important;
+}
+
+.product-field {
+    padding: 0 5rem 0 5rem; 
+}
+
+.list-group {
+    padding: 0 0rem 0 2rem;
+}
+
+.sidebar-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.sidebar-link:hover {
+    color: #EC8A36;
+}
+
+.list-unstyled {
+    list-style: none;
+}
+
+.collapse.show {
+    visibility: visible;
+}
+
+.collapse {
+    visibility: hidden;
+    transition: visibility 0.2s ease-in-out;
+}
+
+.sidebar .list-group-item {
+    font-size: 14px;
+    color: #333;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.text-body:hover {
+    color: #EC8A36;
+}
+
+.list-group-item {
+    font-weight: 400;
+    font-size: 1rem;
+    padding-left: 2rem;
+    border: none;
+}
+
+.list-unstyled li ul.list-unstyled li a {
+    font-size: 14px;
+    color: #333;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.list-unstyled li ul.list-unstyled li a:hover,
+.list-unstyled li ul.list-unstyled li a:active {
+    font-size: 14px;
+    color: #7b3e19;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+.submenu {
+    padding-left: 2rem;
+}
+.sidebar {
+    padding-left: 5rem;
+}
+
+.card {
+    border-width: 0;
+}
+
