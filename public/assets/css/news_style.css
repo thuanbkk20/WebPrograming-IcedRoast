@@ -1,0 +1,44 @@
+
+  /* Đặt các tag trong cùng 1 hàng */
+  .page_tabs li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .container{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: none;
+    font-family: 'SF Pro Text', sans-serif;
+    line-height: 1.42857143;
+    color: #000;
+    font-weight: 400;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 960px;
+  }
+  /* Define styles for the filter button */
+.filter_button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+  
+  /* Define styles for the active filter button */
+  
+  
