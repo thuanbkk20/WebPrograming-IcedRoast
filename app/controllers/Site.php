@@ -69,10 +69,10 @@ class Site extends Controller{
 
             //set message
             $request->message([
-                'last_name.required' => 'Họ tên không được để trống',
-                'last_name.max' => 'Họ tên phải bé hơn 50 ký tự',
-                'first_name.required' => 'Họ tên không được để trống',
-                'first_name.max' => 'Họ tên phải bé hơn 50 ký tự',
+                'last_name.required' => 'Họ tên lót không được để trống',
+                'last_name.max' => 'Họ tên lót phải bé hơn 50 ký tự',
+                'first_name.required' => 'Tên không được để trống',
+                'first_name.max' => 'Tên phải bé hơn 50 ký tự',
                 'phone_number.required' => 'Số điện thoại không được để trống',
                 'phone_number.length' => 'Độ dài của số điện thoại là 10',
                 'email.required' => 'Email không được để trống',
