@@ -31,8 +31,8 @@
     <button type="submit">Lưu</button>
 </form> -->
 
-<div class="container">
-    <div class="row g-0 page-body mx-1 p-2 m-2">
+<div class="container-fluid" style="background-color: rgb(245,245,245);">
+    <div class="row g-0 page-body mx-1 p-2 ">
         <div class="col-lg-3 col-md-3 col-sm-2 mt-0 ms-3">
             <div class="d-flex flex-row mb-3 col-12">
             <div class="pe-3">                  
@@ -89,7 +89,7 @@
             </script>
             </div>
         </div>
-        <div class="col-lg-8 col-md-8 col-sm-10 mt-0 ms-3">
+        <div class="col-lg-8 col-md-8 col-sm-10 mt-0 ms-4 p-3" style="background-color: rgb(255,255,255);">
             <div class="d-flex flex-column">
                     <div class="d-block mb-3">
                         <h2 class="d-block fw-bold">Hồ sơ của tôi</h2>
@@ -131,7 +131,7 @@
                                     </span>
                                 </div>  
                                 </div>
-                                <button type="submit" class="btn btn-primary">Lưu</button>
+                                <button type="submit" class="btn btn-info">Lưu</button>
                     </form>
                 </div>
             </div>
