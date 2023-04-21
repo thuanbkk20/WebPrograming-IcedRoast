@@ -12,3 +12,11 @@ foreach($cart as $item){ ?>
 <?php echo '<pre>'; print_r($item); echo '</pre>';
 }
 ?>
+
+<form method="post" action=<?php echo _WEB_ROOT."/member/order/addOrder"; ?>>
+<label>Địa chỉ nhận hàng</label>
+<input type="text" name="address">
+<label>Ghi chú đơn hàng</label>
+<textarea name="description" placeholder="Ghi chú"></textarea>
+<button type="submit">Đặt hàng</button>
+</form>

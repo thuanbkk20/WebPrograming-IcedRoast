@@ -4,33 +4,50 @@
          <div class="card-body">
            <div class="row justify-content-center">
                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-0">Hãy liên hệ với chúng tôi </p>
-               <form class="mx-1 mx-md-4" method="post">
+               <form class="mx-1 mx-md-4" method="post" action=<?php echo _WEB_ROOT."/contact";?>>
 
                  <div class="d-flex flex-row align-items-center mb-4">
                    <!-- <i class="fas fa-user fa-lg me-3 fa-fw"></i> -->
                    <div class="form-outline flex-fill mb-0">
-                     <input type="text" id="fullname" name="fullname" placeholder="Họ và tên" class="form-control" />
+                     <input type="text" id="fullname" name="fullname" placeholder="Họ và tên" class="form-control" 
+                     value="<?php echo (empty($old['fullname'])?false:$old['fullname']);?>"/>
+                     <span class="text-danger">
+                      <?php echo (empty($errors['fullname'])?false:$errors['fullname']); ?>
+                    </span>
                    </div>
                  </div>
 
                  <div class="d-flex flex-row align-items-center mb-4">
                    <!-- <i class="fas fa-user fa-lg me-3 fa-fw"></i> -->
                    <div class="form-outline flex-fill mb-0">
-                     <input type="number" id="phonenumber" name="phonenumber" placeholder="Số điện thoại" class="form-control" />
+                     <input type="number" id="phonenumber" name="phonenumber" placeholder="Số điện thoại" class="form-control" 
+                     value="<?php echo (empty($old['phonenumber'])?false:$old['phonenumber']);?>"/>
+                     <span class="text-danger">
+                      <?php echo (empty($errors['phonenumber'])?false:$errors['phonenumber']); ?>
+                    </span>
                    </div>
                  </div>
 
                  <div class="d-flex flex-row align-items-center mb-4">
                    <!-- <i class="fas fa-user fa-lg me-3 fa-fw"></i> -->
                    <div class="form-outline flex-fill mb-0">
-                     <input type="text" id="email" name="email" placeholder="Email cá nhân" class="form-control" />
+                     <input type="text" id="email" name="email" placeholder="Email cá nhân" class="form-control" 
+                     value="<?php echo (empty($old['email'])?false:$old['email']);?>"/>
+                     <span class="text-danger">
+                      <?php echo (empty($errors['email'])?false:$errors['email']); ?>
+                    </span>
                    </div>
                  </div>
 
                  <div class="d-flex flex-row align-items-center mb-4">
                    <!-- <i class="fas fa-user fa-lg me-3 fa-fw"></i> -->
                    <div class="form-outline flex-fill mb-0">
-                     <textarea class="form-control" rows="3" placeholder="Hãy để lại lời nhắn cho chúng tôi"></textarea>
+                     <textarea name="detail" class="form-control" rows="3" placeholder="Hãy để lại lời nhắn cho chúng tôi">
+                     <?php echo (empty($old['detail'])?false:$old['detail']);?>
+                     </textarea>
+                     <span class="text-danger">
+                      <?php echo (empty($errors['detail'])?false:$errors['detail']); ?>
+                    </span>
                    </div>
                  </div>
 
