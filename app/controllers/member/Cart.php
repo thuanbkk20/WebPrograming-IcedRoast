@@ -5,15 +5,6 @@ class Cart extends Controller{
     public function __construct(){
         $this->model['CartModel'] = $this->model("CartModel");
         $this->model['userModel'] = $this->model("UserModel");
-        $this->model['ProductModel'] = $this->model("ProductModel");
-
-        $data['cart'] = $this->model['CartModel']->getUserCart(Session::data('user_id'));
-        if(!$data['cart']){
-            Session::data('cartQuantity',0);
-        }else{
-            $quantity = $this->model['CartModel']->getCartQuantity(Session::data('user_id'));
-            Session::data('cartQuantity',$quantity);
-        }
         $data['user'] = [];
         //Lấy user để hiện thông tin trên header
         if(Session::data('user_id')!=null){
@@ -24,6 +15,12 @@ class Cart extends Controller{
     }
 
     public function index(){
+        $quantity = $this->model['CartModel']->getCartQuantity(Session::data('user_id'));
+        if($quantity){
+            Session::data('cartQuantity',$quantity);
+        }else{
+            Session::delete('cartQuantity');
+        }
         $cart = $this->model['CartModel']->getUserCart($this->data['user']['id']);
         $this->data["sub_content"]['cart'] = $cart;
         $this->data["content"] = 'cart';
@@ -47,7 +44,12 @@ class Cart extends Controller{
         if($request->isGet()){
             $id = $_GET['id'];
             if($_GET['sign']=='-'){
-                $this->model['CartModel']->updateQuantity($id,'desrease');
+                $quantity = $this->model['CartModel']->getQuantity($id);
+                if($quantity<=1){
+                    $this->model['CartModel']->deleteProductInCart($id);
+                }else{
+                    $this->model['CartModel']->updateQuantity($id,'desrease');
+                }
             }else{
                 $this->model['CartModel']->updateQuantity($id,'increase');
             }

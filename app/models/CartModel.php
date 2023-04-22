@@ -47,6 +47,12 @@ class CartModel extends Model{
         return $data;
     }
 
+    public function getQuantity($id){
+        $query = $this->db->query("SELECT * FROM cart WHERE id = $id");
+        $data = $query->fetch(PDO::FETCH_ASSOC)['quantity'];
+        return $data;
+    }
+
     public function addToCart($data){
         $this->db->table($this->_table)->insert($data);
     }

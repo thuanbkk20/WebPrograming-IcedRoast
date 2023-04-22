@@ -44,7 +44,7 @@ class News extends Controller{
 
     public function blog(){
         //Trang này để hiển thị các tin tức tổng thể, tại view, biến $newsArr lưu trữ toàn bộ tin tức trong cơ sở dữ liệu
-        $this->data['sub_content']['newsArr'] = $this->model['NewsModel']->getCoffeeholic();
+        $this->data['sub_content']['newsArr'] = $this->model['NewsModel']->getBlog();
 
         // $this->data['sub_content']['page_title'] = "Tin tức";
         $this->data["content"] = 'news/blog';

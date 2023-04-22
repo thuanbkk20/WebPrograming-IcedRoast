@@ -34,15 +34,19 @@ class m0001_initial{
         DROP TABLE IF EXISTS orders;
         CREATE TABLE orders(
             id INT AUTO_INCREMENT,
-	        user_id INT NOT NULL UNIQUE,
-            order_date DATE not null,
-            product_number INT default 1,
-            product_detail varchar(500),
-            total_price INT default 1,
-            payment_status varchar(50) not null,
-            address varchar(100) not null,
-            description varchar(500),
-            primary key (id)
+	        user_id INT NOT NULL,
+            product_id INT NOT NULL,
+            order_date TIMESTAMP not null,
+            quantity INT NOT NULL default 1,
+            price INT NOT NULL,
+            image varchar(200) NOT NULL,
+            name varchar(100) NOT NULL, 
+            size varchar(1) NOT NULL default 'S',
+            payment_status varchar(30) NOT NULL default 'Chưa thanh toán',
+            status varchar(30) NOT NULL default 'Chưa xác nhận',
+            address varchar(200) NOT NULL,
+            description varchar(300),
+            primary key (id, user_id, product_id)
         );
 
         DROP TABLE IF EXISTS cart;
