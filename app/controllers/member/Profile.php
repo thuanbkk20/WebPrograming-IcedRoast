@@ -47,7 +47,7 @@ class Profile extends Controller{
                 $new_user['phone_number'] = $_POST['phone_number'];
 
                 //Update user
-                $this->model['userModel']->updateUser($new_user);
+                $this->model['userModel']->updateUser(Session::data('user_id'),$new_user);
 
                 $message = "Bạn đã thay đổi thông tin cá nhân thành công!";
                 $url = _WEB_ROOT."/member/profile";
