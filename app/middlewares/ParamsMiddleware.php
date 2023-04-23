@@ -14,7 +14,7 @@ class ParamsMiddleware extends Middleware{
         //Check xem tac vu co yeu cau la admin khong
         $arr = explode("/",$_SERVER['REQUEST_URI']);
         $adminFlag = $arr[1]=='admin'?1:0;
-        if($adminFlag && $user['role']!='Quản lý'){
+        if($adminFlag && $user['role']!='admin'){
             $response->reDirect('loadError/permission');
             // header("Location: $url");
         }
