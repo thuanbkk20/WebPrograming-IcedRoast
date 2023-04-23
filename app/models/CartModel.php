@@ -72,4 +72,8 @@ class CartModel extends Model{
             $this->db->query("UPDATE cart SET quantity = quantity - 1 WHERE id = $id");
         }
     }
+
+    public function deleteUserCart($id){
+        $this->db->table($this->_table)->where('user_id','=',$id)->delete();
+    }
 }
