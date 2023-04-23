@@ -46,7 +46,10 @@ class Order extends Controller{
                 $order['image'] = $product['image'];
                 $order['name'] = $product['name'];
                 $order['size'] = $product['size'];
+                //Thêm đơn hàng mới
                 $this->model['OrderModel']->addOrder($order);
+                //Xóa tất cả sản phẩm trong giỏ hàng
+                $this->model['CartModel']->deleteUserCart(Session::data('user_id'));
             }
             $reponse->reDirect('member/order/orderDetail?order_id='.$order['id']);
         }else{
