@@ -48,7 +48,7 @@
                     <div class="pb-2"><?php echo $user['username'];?></div>
                     <div>                
                     <img
-                  src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                    src="<?php echo _WEB_ROOT."/public/assets/images/pen.png";?>" 
                   class="rounded-circle"
                   height="20"
                   alt="Black and White Portrait of a Man"
@@ -100,7 +100,7 @@
                         <span class="col-10"><?php echo $user['username'];?></span>
                     </div>
                     <div>
-                    <form method="post" action="<?php echo _WEB_ROOT; ?>/profile">
+                    <form method="post" action="<?php echo _WEB_ROOT; ?>/member/profile">
                                 <div class="form-group row">
                                     <label for="first_name" class="col-2 col-form-label">Tên</label>
                                     <div class="col-10">

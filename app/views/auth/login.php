@@ -39,14 +39,14 @@
 
                   <h5 class="fw-normal mb-3 text-black-50 pb-lg-3"><i>Cảm nhận hương vị cà phê rang xay cùng IcedRoast!</i></h5>
                   <div class="form-outline mb-2">
-                  <input type="text" name="email" placeholder="Email" class="form-control form-control-lg" value="<?php echo (empty($old['email'])?false:$old['email']);?>" required>
+                  <input type="text" name="email" placeholder="Email cá nhân" class="form-control form-control-lg" value="<?php echo (empty($old['email'])?false:$old['email']);?>" required>
                     <label class="form-label" for="Email address"></label>
                     <span class="text-danger">
                       <?php echo (empty($errors['email'])?false:$errors['email']); ?>
                     </span>
                   </div>
                   <div class="form-outline mb-2">
-                  <input type="password" name="password" placeholder="Password" class="form-control form-control-lg"
+                  <input type="password" name="password" placeholder="Mật khẩu" class="form-control form-control-lg"
                     value="<?php echo (empty($old['password'])?false:$old['password']);?>">
                     <label class="form-label" for="password"></label>
                     <span class="text-danger">
