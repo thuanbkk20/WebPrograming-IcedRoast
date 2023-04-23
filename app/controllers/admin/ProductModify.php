@@ -1,11 +1,12 @@
 <?php
 
-class Dashboard extends Controller{
+class ProductModify extends Controller{
     
     public $data=[], $model;
     public function __construct()
     {
         $this->model['CartModel'] = $this->model('CartModel');
+        $this->model['ProductModel'] = $this->model('ProductModel');
         $this->data['user'] = [];
         $this->data['user']['first_name'] = '';
         //Lấy user để hiện thông tin trên header
@@ -28,8 +29,6 @@ class Dashboard extends Controller{
         // Session::Flash('msg','Welcome');
         // echo Session::Flash('msg');
         // echo '<pre>';print_r(Session::data());echo '</pre>';
-        $this->data['sub_content'] = [];
-        $this->data["content"] = 'admin/dashboard';
-        $this->render('layouts/admin_layout', $this->data);
+        echo 'Quản lí sản phẩm';
     }
 }
