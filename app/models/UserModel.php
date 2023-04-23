@@ -34,21 +34,21 @@ class UserModel extends Model{
         return $data;
     }
 
-    public function updateUser($data){
-        $this->db->table($this->_table)->update($data);
+    public function updateUser($id, $data){
+        $this->db->table($this->_table)->where('id','=',$id)->update($data);
     }
 
-    // public function insertCart($data){
-        // $this->db->table("categories")->insert($data);
-        // return $this->db->lastID();
-    // }
+    public function getAll(){
+        $data = $this->db->table($this->_table)->getAll();
+        return $data;
+    }
 
-    // public function updateCart($data, $id){
-    //     $this->db->table("product_in_cart")->where('user_id','=',$id)->update($data);
-    // }
+    public function deleteUser($id){
+        $this->db->table($this->_table)->where('id','=',$id)->delete();
+    }
 
-    // public function deleteCart($id){
-    //     $this->db->table("product_in_cart")->where('user_id','=',$id)->delete();
-    // }
+    public function getUserName($id){
+        $data = $this->db->table($this->_table)->where('id','=',$id)->select('username')->getFirst()['username'];
+        return $data;
+    }
 }
-?>
