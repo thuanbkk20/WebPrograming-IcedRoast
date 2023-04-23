@@ -87,6 +87,16 @@ class m0001_initial{
             id INT AUTO_INCREMENT,
 	        name varchar(50) not null,
             primary key (id)
+        );
+        
+        DROP TABLE IF EXISTS contact;
+        CREATE TABLE contact(
+            id INT AUTO_INCREMENT,
+            name varchar(50) not null,
+            phone_number varchar(10) not null,
+            email varchar(50) not null,
+            detail varchar(200) not null,
+            primary key (id)
         );";
 
         $db->query($sql);
