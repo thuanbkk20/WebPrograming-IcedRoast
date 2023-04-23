@@ -4,7 +4,7 @@
 <link rel="stylesheet" href=<?php echo _WEB_ROOT."/public/assets/css/news_style.css";?>>
 </head>
 <body>
-<div class="container">
+<div class="container1">
     
     <ul class="page_tabs">
         <li>
@@ -37,14 +37,15 @@
 
 </body>
 </html>
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-lg-5">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-lg-5 mx-auto" style="width: 92%;">
+
   <?php foreach($newsArr as $teaholic){ ?>
     <div class="col mb-4">
       <a href="<?php echo $teaholic['link']; ?>"> 
         <div class="card shadow-sm h-100">
           <!-- Featured image -->
           <div class="bg-image hover-overlay ripple rounded-top" data-mdb-ripple-color="light">
-            <img src="<?php echo $teaholic['image']; ?>" class="card-img-top" />
+            <img src="<?php echo $teaholic['image']; ?>" class="card-img-top" style="width: 100%; height: 380px;"/>
             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
           </div>
 
@@ -55,7 +56,7 @@
                 <i class="fas fa-plane"></i>
                 <?php echo $teaholic['tag']; ?>
               </a>
-              <u>15.07.2020</u>
+              <u style="margin-left: 410px;">15.07.2020</u>
             </div>
 
             <!-- Article title and description -->
