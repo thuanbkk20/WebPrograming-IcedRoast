@@ -12,9 +12,11 @@
 <body>
     <?php
         $this->render('blocks/header', $user);
+        $this->render('blocks/adminNav');
         $this->render($content, $sub_content);
         $this->render('blocks/footer');
     ?>
+
     <script type="text/javascript"  src="/public/assets/js/script.js"></script>
 </body>
 </html>

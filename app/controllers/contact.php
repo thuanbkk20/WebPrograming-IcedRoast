@@ -5,6 +5,7 @@ class contact extends Controller{
     public function __construct(){
         //construct
         $this->data['user']= [];
+        $this->model['ContactModel'] = $this->model('ContactModel');
         $this->data['user']['first_name'] = '';
         //Lấy user để hiện thông tin trên header
         if(Session::data('user_id')!=null){
@@ -45,15 +46,11 @@ class contact extends Controller{
                 Session::Flash('msg','Đã có lỗi xảy ra! Vui lòng kiểm tra lại');
                 Session::Flash('old',$request->getFields());
             }else{
-                //Lấy dữ liệu từ form
-                // $new_user = [];
-                // $new_user['username'] = $_POST['email'];
-                // $new_user['first_name'] = $_POST['first_name'];
-                // $new_user['last_name'] = $_POST['last_name'];
-                // $new_user['phone_number'] = $_POST['phone_number'];
-                // $new_user['password'] = password_hash($_POST['password'], PASSWORD_BCRYPT);
-                // //Tạo user mới
-                // $this->model['userModel']->addUser($new_user);
+                $contact['name'] = trim($_POST['fullname']);
+                $contact['phone_number'] = trim($_POST['phonenumber']);
+                $contact['email'] = trim($_POST['email']);
+                $contact['detail'] = trim($_POST['detail']);
+                $this->model['ContactModel']->addContact($contact);
 
                 $message = "Bạn đã để lại thông tin liên hệ thành công, chuyển đến trang chủ?";
                 $url = "/home";

@@ -97,6 +97,7 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   <li><a class="dropdown-item" href=<?php echo _WEB_ROOT."/site/login"?>>Đăng nhập</a></li>
                   <li><a class="dropdown-item" href=<?php echo _WEB_ROOT."/member/profile";?>>Thông tin cá nhân</a></li>
+                  <li><a class="dropdown-item" href=<?php echo _WEB_ROOT."/admin/dashboard"?>>Admin site</a></li>
                   <li><a class="dropdown-item" href=<?php echo _WEB_ROOT."/site/logout"?>>Đăng xuất</a></li>
                 </ul>
               </div>

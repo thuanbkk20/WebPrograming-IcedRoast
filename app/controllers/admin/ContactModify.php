@@ -1,11 +1,12 @@
 <?php
 
-class Dashboard extends Controller{
+class ContactModify extends Controller{
     
     public $data=[], $model;
     public function __construct()
     {
         $this->model['CartModel'] = $this->model('CartModel');
+        $this->model['ContactModel'] = $this->model('ContactModel');
         $this->data['user'] = [];
         $this->data['user']['first_name'] = '';
         //Lấy user để hiện thông tin trên header
@@ -23,13 +24,13 @@ class Dashboard extends Controller{
     }
 
     public function index(){
+        $this->data['sub_content']['contactArr'] = $this->model['ContactModel']->getAll();
+        $this->data['content'] = 'admin/contact';
         // Session::data('username','Minh Thuan');
         // Session::data('email','thuan@gmail.com');
         // Session::Flash('msg','Welcome');
         // echo Session::Flash('msg');
         // echo '<pre>';print_r(Session::data());echo '</pre>';
-        $this->data['sub_content'] = [];
-        $this->data["content"] = 'admin/dashboard';
         $this->render('layouts/admin_layout', $this->data);
     }
 }
