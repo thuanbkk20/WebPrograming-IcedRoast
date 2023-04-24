@@ -53,10 +53,11 @@
             </div>
          </div>
          <div class="d-flex align-items-center">
-            <form class="d-flex">
+            <form class="d-flex" method="post" action=<?php echo _WEB_ROOT."/product/search"; ?>>
                 <input 
                 class="form-control me-2" 
-                type="text" placeholder="Search">
+                type="text" placeholder="Từ khóa sản phẩm" name="keyword"
+                value="<?php if(isset($keyword)) echo $keyword;?>">
                 <button class="btn btn-primary" type="submit">Search</button>
               </form>
             <!-- Icon -->
