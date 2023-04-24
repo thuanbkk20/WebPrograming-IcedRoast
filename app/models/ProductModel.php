@@ -87,4 +87,16 @@ class ProductModel extends Model{
         $data = $query->fetch(PDO::FETCH_ASSOC)['image'];
         return $data;
     }
+
+    public function addProduct($data){
+        $this->db->table($this->_table)->insert($data);
+    }
+
+    public function updateProduct($id, $data){
+        $this->db->table($this->_table)->where('id','=',$id)->update($data);
+    }
+
+    public function deleteProduct($id){
+        $this->db->table($this->_table)->where('id','=',$id)->delete();
+    }
 }
