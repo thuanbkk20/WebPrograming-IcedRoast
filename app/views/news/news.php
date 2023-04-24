@@ -51,12 +51,12 @@
 
           <!-- Article data -->
           <div class="card-body">
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-start">
               <a href="" class="text-info">
                 <i class="fas fa-plane"></i>
                 <?php echo $news['tag']; ?>
               </a>
-              <u style="margin-left: 390px;">15.07.2020</u>
+              <u style="margin-left: 350px;">15.07.2020</u>
             </div>
 
             <!-- Article title and description -->

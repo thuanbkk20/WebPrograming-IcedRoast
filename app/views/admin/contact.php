@@ -40,7 +40,13 @@
                         <?php echo $contact['detail'] ?>
                     </td>
                     <td style="word-wrap: break-word; overflow: hidden; text-overflow: ellipsis">
-                    <?php echo "<a href="._WEB_ROOT."/admin/ContactModify/delete?id=".$contact['id'].">Xóa</a>";?>
+                    <?php
+                        
+                            echo '<button class="btn btn-danger" onclick="location.href=\''. _WEB_ROOT .'/admin/ContactModify/delete?id='. $contact['id'] .'\'" style="margin-right: 20px;">Xóa</button>';
+                        
+                    ?>
+
+
                     </td>
                     </tr>
                     <?php
