@@ -24,9 +24,30 @@ class ProductModify extends Controller{
     }
 
     public function index(){
-        $data = $this->model['ProductModel']->getAllProduct();
+        //Phân trang
+        if(!isset($_GET['page'])){
+            $page = 1;
+        }else{
+            $page = $_GET['page'];
+        }
+        $results_per_page = 10;
+        $page_first_result = ($page-1) * $results_per_page;
+        $query = $this->db->query("SELECT * FROM product");
+        $number_of_result = $query->rowCount();
+        //determine the total number of pages available
+        $number_of_page = ceil ($number_of_result / $results_per_page);
+        //Lấy dữ liệu gửi đến view
+        $query = "SELECT *FROM product LIMIT " . $page_first_result . "," . $results_per_page;
+        $query = $this->db->query($query);
+        $data = $query->fetchAll(PDO::FETCH_ASSOC);
+
+        // $data = $this->model['ProductModel']->getAllProduct();
+        if(isset($_GET['page'])){
+            $this->data['sub_content']['curPage'] = $_GET['page'];
+        }
         $this->data['sub_content']['user'] = $this->data['user'];
         $this->data['sub_content']['productArr'] = $data;
+        $this->data['sub_content']['number_of_page'] = $number_of_page;
         $this->data["content"] = 'admin/product/list';
         $this->render('layouts/admin_layout', $this->data);
     }

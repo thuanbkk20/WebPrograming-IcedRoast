@@ -25,26 +25,76 @@ class OrderModify extends Controller{
     }
 
     public function index(){
-        $this->data['sub_content']['orderArr'] = $this->model['OrderModel']->getAllOrder();
+        //Phân trang
+        if(!isset($_GET['page'])){
+            $page = 1;
+        }else{
+            $page = $_GET['page'];
+        }
+        $results_per_page = 10;
+        $page_first_result = ($page-1) * $results_per_page;
+        $data = $this->model['OrderModel']->getOrder2();
+        $number_of_result = count($data);
+        //determine the total number of pages available
+        $number_of_page = ceil($number_of_result / $results_per_page);
+        //Lấy dữ liệu gửi đến view
+        //Biến này có các record là mảng các sản phẩm trong đơn hàng
+        $orderArr = array_slice($data,$page_first_result,$results_per_page);
+        $data = [];
+        foreach($orderArr as $key=>$order){
+            $id = $order[0]['id'];
+            $user_id = $order[0]['user_id'];
+            $time = $order[0]['order_date'];
+            $address = $order[0]['address']; 
+            $status = $order[0]['status']; 
+            $payment_status = $order[0]['payment_status'];
+            $description = $order[0]['description'];
+            $quantity = 0;
+            $price = 0;
+            for($i=0; $i<count($order); $i++){
+                $quantity += (int)$order[$i]['quantity'];
+                $price += (int)$order[$i]['quantity']*(int)$order[$i]['price'];
+            }
+            $data[$key]['id'] = $id;
+            $data[$key]['user_id'] = $user_id;
+            $data[$key]['time'] = $time;
+            $data[$key]['address'] = $address;
+            $data[$key]['status'] = $status;
+            $data[$key]['payment_status'] = $payment_status;
+            $data[$key]['quantity'] = $quantity;
+            $data[$key]['price'] = $price;
+            $data[$key]['description'] = $description;
+        }
+
+        if(isset($_GET['page'])){
+            $this->data['sub_content']['curPage'] = $_GET['page'];
+        }
+        $this->data['sub_content']['user'] = $this->data['user'];
+        $this->data['sub_content']['orderArr'] = $data;
+        $this->data['sub_content']['number_of_page'] = $number_of_page;
         $this->data['content'] = 'admin/order';
         $this->render('layouts/admin_layout', $this->data);
     }
 
     public function paymentStatus(){
         $request = new Request();
-        if($request->isPost()){
-            $id = $_POST['id'];
-            $paymentStatus = $_POST['paymentStatus'];
-            $this->db->query("UPDATE orders SET payment_status = $paymentStatus WHERE id = $id");
+        if($request->isGet()){
+            $id = $_GET['id'];
+            $paymentStatus = $_GET['paymentStatus'];
+            $this->db->query("UPDATE orders SET payment_status = '$paymentStatus' WHERE id = $id");
+            echo 'paymentStatus';
         }
+        
     }
 
     public function status(){
         $request = new Request();
-        if($request->isPost()){
-            $id = $_POST['id'];
-            $status = $_POST['status'];
-            $this->db->query("UPDATE orders SET status = $status WHERE id = $id");
+        if($request->isGet()){
+            $id = $_GET['id'];
+            $status = $_GET['status'];
+            $this->db->query("UPDATE orders SET status = '$status' WHERE id = $id");
+            echo 'Status';
         }
+        
     }
 }

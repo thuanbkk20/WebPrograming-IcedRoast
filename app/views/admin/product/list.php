@@ -28,3 +28,18 @@
     }
   ?>
 </table>
+<?php
+  if(isset($curPage)&&(int)$curPage>1){
+    echo "<a href = "._WEB_ROOT."/admin/ProductModify?page=".($curPage-1).">Previous</a>";
+  }else{
+    echo "<a href='#'>Previous</a>";
+  }
+  for($page = 1; $page<= $number_of_page; $page++) {
+    echo "<a href = "._WEB_ROOT."/admin/ProductModify?page=".$page.">".$page."</a>";
+  }
+  if(isset($curPage)&&(int)$curPage<$number_of_page){
+    echo "<a href = "._WEB_ROOT."/admin/ProductModify?page=".($curPage+1).">Next</a>";
+  }else{
+    echo "<a href='#'>Next</a>";
+  }
+?>

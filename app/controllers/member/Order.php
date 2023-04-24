@@ -52,6 +52,7 @@ class Order extends Controller{
                 //Xóa tất cả sản phẩm trong giỏ hàng
                 $this->model['CartModel']->deleteUserCart(Session::data('user_id'));
             }
+            Session::delete('cartQuantity');
             $reponse->reDirect('member/order/orderDetail?order_id='.$order['id']);
         }else{
             $reponse->reDirect('loadError');
@@ -64,9 +65,6 @@ class Order extends Controller{
         if($request->isGet()){
             $order_id = $_GET['order_id'];
             $data = $this->model['OrderModel']->getOrder($order_id);
-            //Cập nhật thông tin giỏ hàng trên header
-            $quantity = $this->model['CartModel']->getCartQuantity($this->data['user']['id']);
-            Session::data('cartQuantity',$quantity);
             $this->data["sub_content"]['orderInfo'] = $data;
             $this->data["content"] = 'profile/orderDetail';
             $this->render('layouts/client_layout', $this->data);
