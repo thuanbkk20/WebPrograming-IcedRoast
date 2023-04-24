@@ -37,16 +37,30 @@
                 <div class="d-flex justify-content-between mb-3">
                     <div>
                             <div class="d-flex flex-row">
-                                <div style="border:1px solid black; background-color:aqua">
+                                <div style="border:1px solid black;">
                                 <a href=<?php echo _WEB_ROOT.'/member/cart/updateQuantity?id='.$item['id'].'&sign=-';?> 
                                 style="text-decoration-line:none;">
-                                -
+                                <img
+                                    src="<?php echo _WEB_ROOT."/public/assets/images/minus.png";?>" 
+                                    class="rounded-circle"
+                                    height="15"
+                                    alt="Black and White Portrait of a Man"
+                                    loading="lazy"
+                                    />
                                 </a>
                                 </div>
-                                <div style="border:1px solid black; color:brown" class="item_quantity"><?php echo $item['quantity']; ?> </div>
-                                <div style="border:1px solid black; background-color:aqua">
+                                <div style="border:1px solid black;width:25px; background-color: #FFEFD5" class="item_quantity text-center"><?php echo $item['quantity']; ?> </div>
+                                <div style="border:1px solid black;">
                                 <a href=<?php echo _WEB_ROOT.'/member/cart/updateQuantity?id='.$item['id'].'&sign=+';?>
-                                style="text-decoration-line:none;">+</a>
+                                style="text-decoration-line:none;">
+                                    <img
+                                    src="<?php echo _WEB_ROOT."/public/assets/images/add.png";?>" 
+                                    class="rounded-circle"
+                                    height="15"
+                                    alt="Black and White Portrait of a Man"
+                                    loading="lazy"
+                                    />
+                                </a>
                                 </div>
                             </div>
                         </div>
@@ -126,11 +140,11 @@
                     <div style="color:red; font-weight:bold;"><h3 id="priceTotal"></h3></div>
                 </div>
                 <div>
-                    <p>Phí vận chuyển sẽ được tính ở trang thanh toán. <br>
-                     Bạn cũng có thể nhập mã giảm giá ở trang thanh toán.</p>
+                    <p>Phí vận chuyển sẽ được tính ở ngoài khu vực thành phố. <br>
+                     Bạn cũng có thể nhập mã giảm giá ở trang đặt hành</p>
                 </div>
                     <div class="d-grid gap-3 mb-2">
-                        <button type="submit" class="btn btn-danger" id="payment">Thanh toán</button>
+                        <button type="submit" class="btn btn-danger" id="payment">Đặt hàng</button>
                     </div>
                     <div class="text-center" style="font-style:italic;">
                     <a href="<?php echo _WEB_ROOT."/product"; ?>" style="text-decoration:none;">
@@ -151,7 +165,11 @@
 
 <script type="text/javascript">
     function validateAddress(address) {
-        if(address.length < 5 || address.length > 50){
+        if(address.length == 0){
+            document.getElementById("error").innerText="Vui lòng điền địa chỉ nhận hàng!"
+            return false;
+        }
+        else if(address.length < 5 || address.length > 50){
             document.getElementById("error").innerText="Vui lòng nhập địa chỉ có độ dài từ 5 đến 50 kí tự!"
             return false
         }

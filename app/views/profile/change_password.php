@@ -22,8 +22,8 @@
     <button type="submit">Lưu</button>
 </form> -->
 
-<div class="container">
-    <div class="row g-0 page-body mx-1 p-2 m-2">
+<div class="container-fluid"  style="background-color: rgb(245,245,245);">
+    <div class="row g-0 page-body mx-1 p-2 ">
         <div class="col-lg-3 col-md-3 col-sm-2 mt-0 ms-3">
             <div class="d-flex flex-row mb-3 col-12">
             <div class="pe-3">                  
@@ -39,7 +39,7 @@
                     <div class="pb-2"><?php echo $user['username'];?></div>
                     <div>                
                     <img
-                  src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                  src="<?php echo _WEB_ROOT."/public/assets/images/pen.png";?>" 
                   class="rounded-circle"
                   height="20"
                   alt="Black and White Portrait of a Man"
@@ -80,18 +80,19 @@
             </script>
             </div>
         </div>
-        <div class="col-lg-8 col-md-8 col-sm-10 mt-0 ms-3">
+        <div class="col-lg-8 col-md-8 col-sm-10 mt-0 ms-3 p-2"  style="background-color: rgb(255,255,255);">
+            <div class="d-flex flex-column">
             <div class="d-flex flex-column">
                     <div class="d-block mb-3">
                         <h2 class="d-block fw-bold">Đổi mật khẩu</h2>
-                        <span>Để bảo mật tài khoản, vui lòng không chia sẻ mật khẩu cho người</span>
+                        <span class="text-warning">Để bảo mật tài khoản, vui lòng không chia sẻ mật khẩu cho người khác!</span>
                     </div>
 
                     <form method="post" action="<?php echo _WEB_ROOT; ?>/member/profile/change_password">
                                 <div class="form-group row">
                                         <label for="password"class="col-2 col-form-label">Mật khẩu</label>
                                     <div class="col-10">
-                                        <input type="password" name="password" placeholder="Password" class="form-control"
+                                        <input type="password" name="password" placeholder="Mật khẩu" class="form-control"
                                         value="<?php echo empty($old['password'])?false:$old['password'];?>">
                                         <span class="text-danger">
                                         <?php echo (empty($errors['password'])?false:$errors['password']); ?>
@@ -101,7 +102,7 @@
                                 <div class="form-group row">
                                     <label for="password" class="col-2 col-form-label"> Xác nhận mật khẩu</label>
                                 <div class="col-10"> 
-                                    <input type="password" name="confirm_password" placeholder="Confirm Password" class="form-control"
+                                    <input type="password" name="confirm_password" placeholder="Nhập lại mật khẩu" class="form-control"
                                     value="<?php echo (empty($old['confirm_password'])?false:$old['confirm_password']);?>"></br>
                                     <span class="text-danger">
                                     <?php echo (empty($errors['confirm_password'])?false:$errors['confirm_password']); ?>
