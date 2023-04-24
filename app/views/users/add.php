@@ -1,5 +1,5 @@
 <h1>Thêm tài khoản</h1>
-<form style="width:70%;float:right;" method="post" action=<?php echo _WEB_ROOT.'/admin/UserModify/create';?>>
+<form method="post" action=<?php echo _WEB_ROOT.'/admin/UserModify/create';?>>
     <div>
         <span >
             <?php echo (empty($msg)?false:$msg); ?>

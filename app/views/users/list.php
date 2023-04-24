@@ -1,13 +1,13 @@
-<div style="width:70%;float:right;">
+<div>
 <h2>Dữ liệu để mọi người dễ xem, chỉnh giao diện xong có thể xóa đoạn này</h2>
 <?php
     echo '<pre>'; print_r($userArr); echo '</pre>';
 ?> 
 </div>
-<div style="width:70%;float:right;">
+<div>
     <a href=<?php echo _WEB_ROOT."/admin/UserModify/create"; ?>>Thêm tài khoản</a>
 </div>
-<table style="width:70%;float:right;">
+<table>
   <tr>
     <th>Tên</th>
     <th>Họ và tên lót</th>

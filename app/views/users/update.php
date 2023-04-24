@@ -1,5 +1,5 @@
-<h1>Chỉnh sửa tài khoản</h1>
-<form style="width:70%;float:right;" method="post" action=<?php echo _WEB_ROOT.'/admin/UserModify/update';?>>
+<h1></h1>
+<form method="post" action=<?php echo _WEB_ROOT.'/admin/UserModify/update';?>>
     <div>
         <span >
             <?php echo (empty($msg)?false:$msg); ?>
@@ -22,7 +22,7 @@
     </div>
     <div class="form-outline mb-4">
         <input type="text" id="first_name" name="first_name"  placeholder="Tên" class="form-control form-control-lg" 
-        value="<?php echo (empty($old['first_name'])?$userToUpdate['first_name']:$old['first_name']);?>"/>
+        va\ue="<?php echo (empty($old['first_name'])?$userToUpdate['first_name']:$old['first_name']);?>"/>
     <span >
         <?php echo (empty($errors['first_name'])?false:$errors['first_name']); ?>
     </span>
