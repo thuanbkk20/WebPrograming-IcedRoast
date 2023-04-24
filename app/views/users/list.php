@@ -1,35 +1,80 @@
-<div style="width:70%;float:right;">
-<h2>Dữ liệu để mọi người dễ xem, chỉnh giao diện xong có thể xóa đoạn này</h2>
-<?php
-    echo '<pre>'; print_r($userArr); echo '</pre>';
-?> 
-</div>
-<div style="width:70%;float:right;">
-    <a href=<?php echo _WEB_ROOT."/admin/UserModify/create"; ?>>Thêm tài khoản</a>
-</div>
-<table style="width:70%;float:right;">
-  <tr>
-    <th>Tên</th>
-    <th>Họ và tên lót</th>
-    <th>Tên tài khoản</th>
-    <th>Số điện thoại</th>
-    <th>Vai trò</th>
-    <th>Chức năng</th>
-  </tr>
-  <?php
-    foreach($userArr as $user){
-        echo '<tr>';
-        echo '<td>'.$user['first_name'].'</td>';
-        echo '<td>'.$user['last_name'].'</td>';
-        echo '<td>'.$user['username'].'</td>';
-        echo '<td>'.$user['phone_number'].'</td>';
-        echo '<td>'.$user['role'].'</td>';
-        echo '<td>';
-        if($user['role'] != 'admin'){
-            echo "<a href="._WEB_ROOT."/admin/UserModify/update?id=".$user['id'].">Sửa</a>";
-            echo "<a href="._WEB_ROOT."/admin/UserModify/delete?id=".$user['id'].">Xóa</a>";
+<!-- Table list of user -->
+<div class="user_container mx-auto" style="height: 700px; width: 92%;">
+    <div class="row">
+    <h1 class="d-flex justify-content-between" style="margin-left: 700px; ">Quản lí thông tin người dùng</h1>
+    </div>
+    <div style="width:70%;float:right;">
+        <a href=<?php echo _WEB_ROOT."/admin/UserModify/create"; ?>>
+        <button type="button" class="btn btn-primary">Thêm tài khoản</button>
+
+        </a>
+        
+    </div>
+
+    <br/>
+    <br/>
+    <table class="table table-hover mt-3 mx-auto" id="table_data" style="table-layout: fixed; white-space: nowrap; width:92%;">
+    <thead class="table-dark">
+        <tr>
+        <th scope="col">Tên</th>
+        <th scope="col">Họ và tên lót</th>
+        <th scope="col">Tên tài khoản</th>
+        <th scope="col">SĐT</th>
+        <th scope="col">Vai trò</th>
+        <th scope="col">Chức năng</th>           
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach($userArr as $user){ ?>
+        <tr>
+        <td style="word-wrap: break-word; overflow: hidden; text-overflow: ellipsis">
+            <?php echo $user['first_name'] ?>
+        </td>
+        
+        
+        <td style="word-wrap: break-word; overflow: hidden; text-overflow: ellipsis">
+            <?php echo $user['last_name'] ?>
+        </td>
+        
+        <td style="word-wrap: break-word; overflow: hidden; text-overflow: ellipsis">
+            <?php echo $user['username'] ?>
+        </td>
+        <td style="word-wrap: break-word; overflow: hidden; text-overflow: ellipsis">
+            <?php echo $user['phone_number'] ?>
+        </td>
+        <td style="word-wrap: break-word; overflow: hidden; text-overflow: ellipsis">
+            <?php echo $user['role'] ?>
+        </td>
+        <td style="word-wrap: break-word; overflow: hidden; text-overflow: ellipsis">
+        <?php
+            if($user['role'] != 'admin'){
+                echo '<button class="btn btn-primary mr-2" onclick="location.href=\''. _WEB_ROOT .'/admin/UserModify/update?id='. $user['id'] .'\'" style="margin-right: 20px;">Sửa</button>';
+                echo '<button class="btn btn-danger" onclick="location.href=\''. _WEB_ROOT .'/admin/UserModify/delete?id='. $user['id'] .'\'" style="margin-right: 20px;">Xóa</button>';
+            }
+        ?>
+        </td> 
+        </tr>
+        <?php
         }
-        echo '</td></tr>';
-    }
-  ?>
-</table>
+        ?>
+    </tbody>
+    </table>
+<?php
+  if(isset($curPage)&&(int)$curPage>1){
+    echo "<a href = "._WEB_ROOT."/admin/UserModify?page=".($curPage-1).">Previous</a>";
+  }else{
+    echo "<a href='#'>Previous</a>";
+  }
+  for($page = 1; $page<= $number_of_page; $page++) {
+    echo "<a href = "._WEB_ROOT."/admin/UserModify?page=".$page.">".$page."</a>";
+  }
+  if(isset($curPage)&&(int)$curPage<$number_of_page){
+    echo "<a href = "._WEB_ROOT."/admin/UserModify?page=".($curPage+1).">Next</a>";
+  }else{
+    echo "<a href='#'>Next</a>";
+  }
+?>
+</div>
+
+
+

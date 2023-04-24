@@ -1,16 +1,3 @@
-<!-- <h1>HEADER</h1> -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" 
-    crossorigin="anonymous">
-    <title>IcedRoast</title>
-</head>
-<body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-sm navbar-light"  style="background-color: rgb(194, 241, 244)">
         <div class="container">
@@ -30,9 +17,9 @@
   <!-- Collapsible wrapper -->
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <!-- Navbar brand -->
-    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+    <a class="navbar-brand mt-2 mt-lg-0" href=<?php echo _WEB_ROOT; ?>>
       <img
-        src='public/assets/images/logo_IcedRoast.png'
+        src=<?php echo _WEB_ROOT.'/public/assets/images/logo_IcedRoast.png';?>
         height="30"
         weight="40"
         alt="IcedRoastLogo"
@@ -48,29 +35,30 @@
           <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">Trang chủ</a> 
+                <a class="nav-link" href=<?php echo _WEB_ROOT; ?>>Trang chủ</a> 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Giới thiệu</a>
+                <a class="nav-link" href=<?php echo _WEB_ROOT.'/aboutUs'; ?>>Giới thiệu</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Tin tức</a> 
+                <a class="nav-link" href=<?php echo _WEB_ROOT.'/news'; ?>>Tin tức</a> 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Sản phẩm</a> 
+                <a class="nav-link" href=<?php echo _WEB_ROOT.'/product'; ?>>Sản phẩm</a> 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Liên hệ</a> 
+                <a class="nav-link" href=<?php echo _WEB_ROOT.'/contact'; ?>>Liên hệ</a> 
               </li>
             </ul>
             </div>
          </div>
          <div class="d-flex align-items-center">
-            <form class="d-flex">
+            <form class="d-flex" method="post" action=<?php echo _WEB_ROOT."/product/search"; ?>>
                 <input 
                 class="form-control me-2" 
-                type="text" placeholder="Search">
-                <button class="btn btn-primary" type="submit">Seacrh</button>
+                type="text" placeholder="Từ khóa sản phẩm" name="keyword"
+                value="<?php if(isset($keyword)) echo $keyword;?>">
+                <button class="btn btn-primary" type="submit">Search</button>
               </form>
             <!-- Icon -->
             <a class="link-secondary me-3" href="#">
@@ -79,11 +67,16 @@
             <ul class="navbar-nav">
                 <!-- Badge -->
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span class="badge badge-pill bg-danger">1</span>
+                  <a class="nav-link" href=<?php echo _WEB_ROOT.'/member/cart';?>>
+                    <span class="badge badge-pill bg-danger">
+                      <?php
+                        if(!Session::data('cartQuantity')) echo 0;
+                        else echo Session::data('cartQuantity');
+                      ?>
+                    </span>
                     <span><i class="fas fa-shopping-cart"></i></span>
                     <img
-                    src="public/assets/images/Giohang.png"
+                    src=<?php echo _WEB_ROOT."/public/assets/images/Giohang.png";?>
                     height="25"
                     alt="Black and White Portrait of a Man"
                     loading="lazy"
@@ -93,7 +86,7 @@
               </ul>
               <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  User name
+                  <?php if(isset($first_name)) echo $first_name; else echo "User name";?>
                   <img
                   src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
                   class="rounded-circle"
@@ -103,16 +96,12 @@
                 />
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="site/logout">Đăng xuất</a></li>
+                  <li><a class="dropdown-item" href=<?php echo _WEB_ROOT."/site/login"?>>Đăng nhập</a></li>
+                  <li><a class="dropdown-item" href=<?php echo _WEB_ROOT."/member/profile";?>>Thông tin cá nhân</a></li>
+                  <li><a class="dropdown-item" href=<?php echo _WEB_ROOT."/admin/dashboard"?>>Admin site</a></li>
+                  <li><a class="dropdown-item" href=<?php echo _WEB_ROOT."/site/logout"?>>Đăng xuất</a></li>
                 </ul>
               </div>
           </div>
         </div>
       </nav>
-      <!-- header -->
-
-      <!-- body -->
-      
-</hr>

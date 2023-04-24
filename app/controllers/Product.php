@@ -88,13 +88,13 @@ class Product extends Controller{
         }   
         $this->data["content"] = 'products/list';
         //Render view
-        $this->render('layouts/client_layout', $this->data);
+        $this->render('layouts/product_layout', $this->data);
     }
 
     public function detail(){
         $request = new Request();
         if($request->isGet()){
-            $this->data['sub_content']['mainProduct'] = $this->model['ProductModel']->getProductById($_GET['id']);
+            $this->data['sub_content']['mainProduct'] =  $this->model['ProductModel']->getProductById($_GET['id']);
             $category = $this->data['sub_content']['mainProduct']['category'];
             $this->data['sub_content']['relatedProduct'] = $this->model['ProductModel']->getByCategory($category);
             $this->data["content"] = 'products/detail';
@@ -144,5 +144,19 @@ class Product extends Controller{
             //Render view
             $this->render('layouts/client_layout', $this->data);
         }
+    }
+
+    public function search(){
+        $request = new Request();
+        $keyword = "";
+        $this->data['sub_content']['productArr'] = [];
+        if($request->isPost()){
+            $keyword = $_POST['keyword'];
+            $this->data['sub_content']['productArr'] = $this->model['ProductModel']->searchProduct($keyword);
+        }
+        $this->data["user"]['keyword'] = $keyword;
+        $this->data["content"] = 'products/list';
+        //Render view
+        $this->render('layouts/product_layout', $this->data);
     }
 }

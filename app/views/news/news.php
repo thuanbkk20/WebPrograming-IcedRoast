@@ -6,10 +6,11 @@
 <body>
 <div class="container1">
     
+            
     <ul class="page_tabs">
         <li>
         <a href=<?php echo _WEB_ROOT."/news";?> class="sidebar-link">
-            <button class="filter_button active">Tất cả</button>
+            <button class="filter_button orange active">Tất cả</button>
         </a>
             
         </li>
@@ -39,11 +40,12 @@
 </html>
 
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-lg-5 mx-auto" style="width: 92%;">
-  <?php foreach($newsArr as $news){ ?>
+<?php foreach($newsArr as $news){ ?>
     <div class="col mb-4">
       <a href="<?php echo $news['link']; ?>"> 
         <div class="card shadow-sm h-100">
           <!-- Featured image -->
+          
           <div class="bg-image hover-overlay ripple rounded-top" data-mdb-ripple-color="light">
             <img src="<?php echo $news['image']; ?>" class="card-img-top" style="width: 100%; height: 380px;" />
             <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
@@ -51,12 +53,12 @@
 
           <!-- Article data -->
           <div class="card-body">
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-start">
               <a href="" class="text-info">
                 <i class="fas fa-plane"></i>
                 <?php echo $news['tag']; ?>
               </a>
-              <u style="margin-left: 390px;">15.07.2020</u>
+              <u style="margin-left: 350px;">15.07.2020</u>
             </div>
 
             <!-- Article title and description -->
@@ -66,8 +68,12 @@
         </div>
       </a>
     </div>
-  <?php } ?>
+  
+    <?php } ?>
+ 
+  
 </div>
+
 
 
 
