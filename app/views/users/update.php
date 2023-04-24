@@ -1,5 +1,6 @@
-<h1>Chỉnh sửa tài khoản</h1>
-<form style="width:70%;float:right;" method="post" action=<?php echo _WEB_ROOT.'/admin/UserModify/update';?>>
+<h1 class="d-flex justify-content-between " style="margin-left: 820px;" >Chỉnh sửa tài khoản</h1>
+
+<form class="p-4 border rounded mx-auto" method="post" action="<?php echo _WEB_ROOT.'/admin/UserModify/create';?>" style="width:42%; background-color: rgb(194, 241, 200);">
     <div>
         <span >
             <?php echo (empty($msg)?false:$msg); ?>
@@ -69,6 +70,7 @@
 
     <div class="d-flex justify-content-center">
         <button type="submit"
-        class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Cập nhật</button>
+        class="btn btn-primary">Cập nhật</button>
     </div>
 </form>
+<br/><br/>
