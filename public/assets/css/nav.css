@@ -20,19 +20,6 @@ svg {
     color: #EC8A36;
 }
 
-.list-unstyled {
-    list-style: none;
-}
-
-.collapse.show {
-    visibility: visible;
-}
-
-.collapse {
-    visibility: hidden;
-    transition: visibility 0.2s ease-in-out;
-}
-
 .sidebar .list-group-item {
     font-size: 14px;
     color: #333;
