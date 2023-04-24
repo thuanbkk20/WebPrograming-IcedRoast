@@ -36,7 +36,7 @@ class m0001_initial{
             id INT AUTO_INCREMENT,
 	        user_id INT NOT NULL,
             product_id INT NOT NULL,
-            order_date TIMESTAMP not null,
+            order_date TIMESTAMP not null DEFAULT CURRENT_TIMESTAMP,
             quantity INT NOT NULL default 1,
             price INT NOT NULL,
             image varchar(200) NOT NULL,
@@ -96,6 +96,7 @@ class m0001_initial{
             phone_number varchar(10) not null,
             email varchar(50) not null,
             detail varchar(200) not null,
+            time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
             primary key (id)
         );";
 
