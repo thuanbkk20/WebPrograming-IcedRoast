@@ -17,7 +17,6 @@
           <div class="card" style="border-radius: 15px;">
             <div class="card-body p-4">
               <h2 class="text-uppercase text-center mb-5">Tạo tài khoản</h2>
-
               <form method="post">
                 <div>
                   <span class="text-danger">
@@ -75,7 +74,7 @@
                     class="btn btn-block btn-lg gradient-custom-4" style="background-color: rgb(111, 78, 55); color: white;">Đăng ký</button>
                 </div>
 
-                <p class="text-center text-muted mt-5 mb-0">Bạn đã có tài khoản? <a href="/site/login"
+                <p class="text-center text-muted mt-5 mb-0">Bạn đã có tài khoản? <a href="#!"
                     class="fw-bold text-body">Đăng nhập tại đây</u></a></p>
               </form>
             </div>

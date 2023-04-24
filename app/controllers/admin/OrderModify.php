@@ -7,6 +7,7 @@ class OrderModify extends Controller{
     {
         $this->model['CartModel'] = $this->model('CartModel');
         $this->model['OrderModel'] = $this->model('OrderModel');
+        $this->model['ContactModel'] = $this->model('ContactModel');
         $this->data['user'] = [];
         $this->data['user']['first_name'] = '';
         //Lấy user để hiện thông tin trên header
@@ -24,11 +25,26 @@ class OrderModify extends Controller{
     }
 
     public function index(){
-        // Session::data('username','Minh Thuan');
-        // Session::data('email','thuan@gmail.com');
-        // Session::Flash('msg','Welcome');
-        // echo Session::Flash('msg');
-        // echo '<pre>';print_r(Session::data());echo '</pre>';
-        echo 'Quản lí đơn hàng';
+        $this->data['sub_content']['orderArr'] = $this->model['OrderModel']->getAllOrder();
+        $this->data['content'] = 'admin/order';
+        $this->render('layouts/admin_layout', $this->data);
+    }
+
+    public function paymentStatus(){
+        $request = new Request();
+        if($request->isPost()){
+            $id = $_POST['id'];
+            $paymentStatus = $_POST['paymentStatus'];
+            $this->db->query("UPDATE orders SET payment_status = $paymentStatus WHERE id = $id");
+        }
+    }
+
+    public function status(){
+        $request = new Request();
+        if($request->isPost()){
+            $id = $_POST['id'];
+            $status = $_POST['status'];
+            $this->db->query("UPDATE orders SET status = $status WHERE id = $id");
+        }
     }
 }

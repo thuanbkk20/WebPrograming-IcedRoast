@@ -16,6 +16,7 @@ class Order extends Controller{
     }
 
     public function index(){
+        $this->data['sub_content']['user'] = $this->data['user'];
         $data = $this->model['OrderModel']->getUserOrder(Session::data('user_id'));
         $this->data["sub_content"]['orderArr'] = $data;
         $this->data["content"] = 'profile/order';
