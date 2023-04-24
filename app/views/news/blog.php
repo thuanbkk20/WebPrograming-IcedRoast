@@ -27,7 +27,7 @@
         </li>
         <li>
         <a href=<?php echo _WEB_ROOT."/news/blog";?> class="sidebar-link">
-            <button class="filter_button active">Blog</button>
+            <button class="filter_button orange active">Blog</button>
         </a>
             
         </li>
@@ -37,7 +37,9 @@
 
 </body>
 </html>
+
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-lg-5 mx-auto" style="width: 92%;">
+
   <?php foreach($newsArr as $blog){ ?>
     <div class="col mb-4">
       <a href="<?php echo $blog['link']; ?>"> 
@@ -50,12 +52,12 @@
 
           <!-- Article data -->
           <div class="card-body">
-            <div class="d-flex justify-content-start">
+            <div class="d-flex justify-content-between">
               <a href="" class="text-info">
                 <i class="fas fa-plane"></i>
                 <?php echo $blog['tag']; ?>
               </a>
-              <u style="margin-left: 420px;">15.07.2020</u>
+              <u style="margin-left: 410px;">15.07.2020</u>
             </div>
 
             <!-- Article title and description -->
@@ -67,3 +69,5 @@
     </div>
   <?php } ?>
 </div>
+
+
