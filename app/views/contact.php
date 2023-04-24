@@ -42,7 +42,7 @@
                  <div class="d-flex flex-row align-items-center mb-4">
                    <!-- <i class="fas fa-user fa-lg me-3 fa-fw"></i> -->
                    <div class="form-outline flex-fill mb-0">
-                     <textarea class="form-control" id="message" name="message" rows="3" placeholder="Hãy để lại lời nhắn cho chúng tôi"></textarea>
+                     <textarea class="form-control" id="message" name="detail" rows="3" placeholder="Hãy để lại lời nhắn cho chúng tôi"></textarea>
                      <?php echo (empty($old['detail'])?false:$old['detail']);?>
                      </textarea>
                      <span class="text-danger">
