@@ -14,7 +14,7 @@
                     <th scope="col">SĐT</th>
                     <th scope="col">Email</th>
                     <th scope="col">Lời nhắn</th>
-
+                    <th>Xóa liên hệ</th>
                                    
                     </tr>
                 </thead>
@@ -39,7 +39,9 @@
                     <td style="word-wrap: break-word; overflow: hidden; text-overflow: ellipsis">
                         <?php echo $contact['detail'] ?>
                     </td>
-                    
+                    <td style="word-wrap: break-word; overflow: hidden; text-overflow: ellipsis">
+                    <?php echo "<a href="._WEB_ROOT."/admin/ContactModify/delete?id=".$contact['id'].">Xóa</a>";?>
+                    </td>
                     </tr>
                     <?php
                     }

@@ -26,11 +26,28 @@ class ContactModify extends Controller{
     public function index(){
         $this->data['sub_content']['contactArr'] = $this->model['ContactModel']->getAll();
         $this->data['content'] = 'admin/contact';
-        // Session::data('username','Minh Thuan');
-        // Session::data('email','thuan@gmail.com');
-        // Session::Flash('msg','Welcome');
-        // echo Session::Flash('msg');
-        // echo '<pre>';print_r(Session::data());echo '</pre>';
+        $this->render('layouts/admin_layout', $this->data);
+    }
+
+    public function delete(){
+        $request = new Request();
+        if($request->isGet()){
+            $id = $_GET['id'];
+            $this->model['ContactModel']->deleteContact($id);
+            $message = 'Bạn đã xóa liên hệ của người dùng thành công';
+            $url = "/admin/ContactModify";
+            
+            // Generate the JavaScript code for the popup alert and redirect
+            echo '<script>';
+            echo 'if (confirm("' . $message . '")) {';
+            echo '    window.location.href = "' . $url . '";';
+            echo '} else {';
+            echo '    window.location.href = "' . $url . '";';
+            echo '}';
+            echo '</script>';
+        }
+        $this->data['sub_content']['contactArr'] = $this->model['ContactModel']->getAll();
+        $this->data['content'] = 'admin/contact';
         $this->render('layouts/admin_layout', $this->data);
     }
 }

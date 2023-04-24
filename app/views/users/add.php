@@ -1,9 +1,12 @@
-<h1 class="d-flex justify-content-between " style="margin-left: 820px;" >Thêm tài khoản</h1>
+<h1 class="d-flex justify-content-between " style="margin-left: 700px;" >Thêm tài khoản</h1>
 
 <form class="p-4 border rounded mx-auto" method="post" action="<?php echo _WEB_ROOT.'/admin/UserModify/create';?>" style="width:42%; background-color: rgb(194, 241, 200);">
     <!-- form content -->
-
-
+    <div>
+        <span >
+            <?php echo (empty($msg)?false:$msg); ?>
+        </span>
+    </div>
     <!-- form content -->
 
     <div class="form-group mb-4">
@@ -35,7 +38,7 @@
 
     <div class="form-group mb-4">
         <label for="email">Email</label>
-        <input type="text" id="email" name="email" class="form-control" 
+        <input type="email" id="email" name="email" class="form-control" 
         value="<?php echo (empty($old['email'])?false:$old['email']);?>"/>
         <span class="text-danger">
             <?php echo (empty($errors['email'])?false:$errors['email']); ?>
@@ -60,6 +63,7 @@
     </div>
 
     <div class="form-outline mb-4">
+        <label for="password">Xác nhận mật khẩu</label>
         <input type="password" id="repeatpassword" name="confirm_password" placeholder="Nhập lại mật khẩu" class="form-control form-control-lg" 
         value="<?php echo (empty($old['confirm_password'])?false:$old['confirm_password']);?>"/>
         <span >

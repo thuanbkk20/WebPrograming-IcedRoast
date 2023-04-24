@@ -94,7 +94,7 @@ class Product extends Controller{
     public function detail(){
         $request = new Request();
         if($request->isGet()){
-            $this->data['sub_content']['mainProduct'] = $this->model['ProductModel']->getProductById($_GET['id']);
+            $this->data['sub_content']['mainProduct'] =  $this->model['ProductModel']->getProductById($_GET['id']);
             $category = $this->data['sub_content']['mainProduct']['category'];
             $this->data['sub_content']['relatedProduct'] = $this->model['ProductModel']->getByCategory($category);
             $this->data["content"] = 'products/detail';

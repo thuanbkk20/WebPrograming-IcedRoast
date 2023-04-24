@@ -31,4 +31,8 @@ class ContactModel extends Model{
     public function addContact($data){
         $this->db->table($this->_table)->insert($data);
     }
+
+    public function deleteContact($id){
+        $this->db->table($this->_table)->where('id','=',$id)->delete();
+    }
 }

@@ -26,7 +26,7 @@ class Order extends Controller{
         $request = new Request();
         $reponse = new Response();
         // Delete product in cart
-        if($request->isPost()){
+        if($request->isPost()&&isset($_POST['description'])&&isset($_POST['address'])){
             $max_id = $this->model['OrderModel']->getMaxId();
             if($max_id){
                 $order['id'] = $max_id + 1;
@@ -63,6 +63,9 @@ class Order extends Controller{
         if($request->isGet()){
             $order_id = $_GET['order_id'];
             $data = $this->model['OrderModel']->getOrder($order_id);
+            //Cập nhật thông tin giỏ hàng trên header
+            $quantity = $this->model['CartModel']->getCartQuantity($this->data['user']['id']);
+            Session::data('cartQuantity',$quantity);
             $this->data["sub_content"]['orderInfo'] = $data;
             $this->data["content"] = 'profile/orderDetail';
             $this->render('layouts/client_layout', $this->data);
