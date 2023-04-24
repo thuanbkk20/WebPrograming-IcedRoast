@@ -22,10 +22,10 @@
   
   
   /* Define styles for the filter button */
-.filter_button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
+  .filter_button {
+    background-color: white;
+    border: 2px solid orange;
+    color: orange;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -35,7 +35,26 @@
     cursor: pointer;
     border-radius: 50px;
   }
+  .filter_button.orange{
+    background-color: orange;
+    color: white;
+  }
   
+  .filter_button:hover {
+    background-color: rgb(246, 224, 182);
+    color: white;
+  }
+  .filter_button:on-click {
+    background-color: orange;
+    color: white;
+  }
+  
+  .filter_button:active {
+    background-color: orange;
+    border: none;
+    color: white;
+  }
+
   /* Define styles for the active filter button */
   
   
