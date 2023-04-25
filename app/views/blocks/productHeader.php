@@ -1,5 +1,5 @@
     <!-- navbar -->
-    <nav class="navbar navbar-expand-sm navbar-light"  style="background-color: rgb(194, 241, 244)">
+    <nav class="navbar navbar-expand-sm navbar-light"  style="background-color: #FEF3D7">
         <div class="container">
             <!-- Toggle button -->
             <button

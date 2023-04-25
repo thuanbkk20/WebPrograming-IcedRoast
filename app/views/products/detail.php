@@ -1,9 +1,6 @@
 <link rel="stylesheet" href=<?php echo _WEB_ROOT."/public/assets/css/detail.css";?>>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/draggable/1.1.0/draggable.min.css" integrity="sha512-HYdOyG3/fyA21iXzjLDlO1ogpAcwT8T/KTt6HXgAulDjs0iS8rxh/D9pCgV7n0UhjW67V0xv+m4NfbdU6a5NQg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/draggable/1.1.0/draggable.min.js" integrity="sha512-l3GtgIvngEGF+5HIT+mYJ0BSr2D9vy85HbI91zLdmAtioe0ZpCEBjFW83GKLp96kwO8OjK9XyIQ0z/T2UMOaxg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <div class="container mt-4 mb-4">
     <h6 class="container mx-2">
@@ -212,6 +209,8 @@
         });
     });
 </script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
 
 <!-- <?php
     echo '<pre>'; print_r($data); echo '</pre>';

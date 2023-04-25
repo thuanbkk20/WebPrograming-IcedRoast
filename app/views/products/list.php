@@ -82,22 +82,22 @@
                 <?php 
                 $currentCategory = '';
                 foreach ($productArr as $product): 
-                    if ($product['category'] !== $currentCategory): 
-                        if ($product['category'] === 'Vietnam_Coffee') echo "<h3>Cà Phê Việt Nam</h3>";
-                        if ($product['category'] === 'Machine_Coffee') echo "<h3>Cà Phê Máy</h3>";
-                        if ($product['category'] === 'Cold_Brew') echo "<h3>Cold Brew</h3>";
-                        if ($product['category'] === 'CloudFee') echo "<h3>Cloud Fee</h3>";
-                        if ($product['category'] === 'CloudTea') echo "<h3>Cloud Tea</h3>";
-                        if ($product['category'] === 'Fruit_Tea') echo "<h3>Trà Trái Cây</h3>";
-                        if ($product['category'] === 'Macchiato') echo "<h3>Trà Sữa Macchiato</h3>";
-                        if ($product['category'] === 'Hi-Tea_Tea') echo "<h3>Hi-Tea Trà</h3>";
-                        if ($product['category'] === 'Hi-Tea_Ice') echo "<h3>Hi-Tea Đá Tuyết</h3>";
-                        if ($product['category'] === 'Pastries') echo "<h3>Bánh Mặn</h3>";
-                        if ($product['category'] === 'Cakes') echo "<h3>Bánh Ngọt</h3>";
-                        if ($product['category'] === 'Snack') echo "<h3>Snack</h3>";
-                        if ($product['category'] === 'Tea-at-home') echo "<h3>Trà Tại Nhà</h3>";
-                        if ($product['category'] === 'Coffee-at-home') echo "<h3>Cà Phê Tại Nhà</h3>";
-                        if ($product['category'] === 'Chocolate') echo "<h3>Thức Uống Khác</h3>";
+                    if ($product['category'] !== $currentCategory):     
+                        if ($product['category'] === 'Vietnam_Coffee') echo "<h3 class='fw-bold'>Cà Phê Việt Nam</h3>";
+                        if ($product['category'] === 'Machine_Coffee') echo "<h3 class='fw-bold'>Cà Phê Máy</h3>";
+                        if ($product['category'] === 'Cold_Brew') echo "<h3 class='fw-bold'>Cold Brew</h3>";
+                        if ($product['category'] === 'CloudFee') echo "<h3 class='fw-bold'>Cloud Fee</h3>";
+                        if ($product['category'] === 'CloudTea') echo "<h3 class='fw-bold'>Cloud Tea</h3>";
+                        if ($product['category'] === 'Fruit_Tea') echo "<h3 class='fw-bold'>Trà Trái Cây</h3>";
+                        if ($product['category'] === 'Macchiato') echo "<h3 class='fw-bold'>Trà Sữa Macchiato</h3>";
+                        if ($product['category'] === 'Hi-Tea_Tea') echo "<h3 class='fw-bold'>Hi-Tea Trà</h3>";
+                        if ($product['category'] === 'Hi-Tea_Ice') echo "<h3 class='fw-bold'>Hi-Tea Đá Tuyết</h3>";
+                        if ($product['category'] === 'Pastries') echo "<h3 class='fw-bold'>Bánh Mặn</h3>";
+                        if ($product['category'] === 'Cakes') echo "<h3 class='fw-bold'>Bánh Ngọt</h3>";
+                        if ($product['category'] === 'Snack') echo "<h3 class='fw-bold'>Snack</h3>";
+                        if ($product['category'] === 'Tea-at-home') echo "<h3 class='fw-bold'>Trà Tại Nhà</h3>";
+                        if ($product['category'] === 'Coffee-at-home') echo "<h3 class='fw-bold'>Cà Phê Tại Nhà</h3>";
+                        if ($product['category'] === 'Chocolate') echo "<h3 class='fw-bold'>Thức Uống Khác</h3>";
                         $currentCategory = $product['category'];
                         echo "<br><br>";
                     endif;
