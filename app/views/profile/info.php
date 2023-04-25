@@ -68,7 +68,7 @@
                     </ul>
                     </li>
                     <li class="list-group-item">
-                    <a href=<?php echo _WEB_ROOT."/member/profile/order"; ?> class="sidebar-link">
+                    <a href=<?php echo _WEB_ROOT."/member/order"; ?> class="sidebar-link">
                         Đơn mua
                     </a>
                     </li>
