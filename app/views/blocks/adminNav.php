@@ -47,3 +47,4 @@
         <?php $this->render($content, $sub_content);?>
     </div>
 </div>
+<br>

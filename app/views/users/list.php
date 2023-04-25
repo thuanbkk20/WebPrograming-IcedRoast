@@ -1,15 +1,12 @@
 <!-- Table list of user -->
 <div class="user_container mx-auto" style="height: 700px; width: 92%;">
     <div class="row">
-    <h1 class="d-flex justify-content-between" style="margin-left: 700px; ">Quản lí thông tin người dùng</h1>
+    <h1 class="d-flex justify-content-between">Quản lí thông tin người dùng</h1>
     </div>
-    <div style="width:70%;float:right;">
+
         <a href=<?php echo _WEB_ROOT."/admin/UserModify/create"; ?>>
         <button type="button" class="btn btn-primary">Thêm tài khoản</button>
-
         </a>
-        
-    </div>
 
     <br/>
     <br/>
