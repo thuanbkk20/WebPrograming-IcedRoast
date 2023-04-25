@@ -3,6 +3,8 @@
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
 
 <div class="container mt-4 mb-4">
+    <input type="hidden" id="webRoot" value=<?php echo _WEB_ROOT; ?>>
+    <input type="hidden" id="currentQuantity" value=<?php echo Session::data('cartQuantity'); ?>>
     <h6 class="container mx-2">
         <a class="text-decoration-none" style="color: #000" href=<?php echo _WEB_ROOT."/product";?>>Sản phẩm</a>
         <span style="color: #b3b3b3"> / </span>
@@ -84,8 +86,8 @@
         </div>
         
         <div class="col-md-6 col-lg-6">
-            <form class="product-info px-4" method="post" action="<?php echo _WEB_ROOT ?>/product/addToCart">
-                <input type="hidden" name="product_id" value="<?php echo $data['mainProduct']['id']; ?>">
+            <div class="product-info px-4" method="post">
+                <input type="hidden" name="product_id" value="<?php echo $data['mainProduct']['id']; ?>" id="productId">
                 <h1 class="product-title"><?php echo $data['mainProduct']['name'] ?></h1>
 
                 <?php 
@@ -117,18 +119,18 @@
                     </label>
                 </div>
                             
-                <input type="hidden" name="price" value=<?php echo $data['mainProduct']['price']; ?>>
+                <input type="hidden" name="price" value=<?php echo $data['mainProduct']['price']; ?> id="totalPrice">
 
                 <h4 class="mt-3 mb-3">Mô tả sản phẩm</h4>
                 <p>- <?php echo $data['mainProduct']['description'] ?></p>
 
                 <h5 class="mt-3 mb-3">Số lượng</h5>
-                <input class="form-control w-25" type="number" name="quantity" value="1">
-
+                <input class="form-control w-25" type="number" name="quantity" value="1" id="quantity">
+                <span id="quantityError" style="color:red"></span>
                 <div class="product-cart mt-4 align-items-center">
-                    <button type="submit" class="btn text-uppercase mr-2 px-4 text-white" style="background-color: #E57905"><strong>Thêm vào giỏ hàng</strong></button>
+                    <button class="btn text-uppercase mr-2 px-4 text-white" style="background-color: #E57905" id="addtoCart"><strong>Thêm vào giỏ hàng</strong></button>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 
@@ -156,57 +158,4 @@
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-<script>
-    let radioBtns = document.querySelectorAll('input[name="size"]');
-    let priceDisplay = document.querySelector('.product-price');
-    radioBtns.forEach((btn) => {
-        btn.addEventListener('change', () => {
-            let newPrice = btn.getAttribute('data-price');
-            priceDisplay.textContent = newPrice.toLocaleString('vi-VN') + ' đ';
-        });
-    });
-
-    const radioButtons = document.querySelectorAll('input[type="radio"][name="size"]');
-    radioButtons.forEach((radioButton) => {
-        radioButton.addEventListener('change', () => {
-            const selectedSize = document.querySelector('input[type="radio"][name="size"]:checked');
-            const priceInput = document.querySelector('input[name="price"]');
-            const price = selectedSize.getAttribute('data-price');
-            priceInput.value = price*1000;
-        });
-    });
-
-    $(document).ready(function(){
-        var relatedProductCount = $('.related-product .col-lg-2').length;
-        var slidesToShow = (relatedProductCount > 6) ? 6 : relatedProductCount;
-        
-        $('.related-product').slick({
-            slidesToShow: slidesToShow,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 0,
-            prevArrow: '<button type="button" class="slick-prev"></button>',
-            nextArrow: '<button type="button" class="slick-next"></button>',
-            draggable: true,
-            touchThreshold: 10, // thêm thuộc tính touchThreshold
-            variableWidth: true, // thêm thuộc tính variableWidth
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 4,
-                        slidesToScroll: 0.2,
-                        infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 0.2
-                }
-            }]
-        });
-    });
-</script>
+<script type="text/javascript" src=<?php echo _WEB_ROOT."/public/assets/js/productDetail.js";?>></script>
