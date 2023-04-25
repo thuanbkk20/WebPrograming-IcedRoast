@@ -59,21 +59,21 @@
             <div class="d-flex flex-column mb-3 col-12">
                 <ul class="list-group">
                     <li class="list-group-item">
-                    <a href="#" class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#cafe-submenu" aria-expanded="false" aria-controls="cafe-submenu">
+                    <a href=<?php echo _WEB_ROOT."/member/profile"; ?> class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#cafe-submenu" aria-expanded="false" aria-controls="cafe-submenu">
                         Tài khoản của tôi
                     </a>
                     <ul class="list-unstyled collapse" id="cafe-submenu">
-                        <li><a href="#">Hồ sơ</a></li>
-                        <li><a href="#">Đổi mật khẩu</a></li>
+                        <li><a href=<?php echo _WEB_ROOT."/member/profile"; ?>>Hồ sơ</a></li>
+                        <li><a href=<?php echo _WEB_ROOT."/member/profile/change_password"; ?>>Đổi mật khẩu</a></li>
                     </ul>
                     </li>
                     <li class="list-group-item">
-                    <a href="#" class="sidebar-link">
+                    <a href=<?php echo _WEB_ROOT."/member/profile/order"; ?> class="sidebar-link">
                         Đơn mua
                     </a>
                     </li>
                     <li class="list-group-item">
-                    <a href="#" class="sidebar-link">
+                    <a href=<?php echo _WEB_ROOT."/member/cart"; ?> class="sidebar-link">
                         Giỏ hàng
                     </a>
                     </li>

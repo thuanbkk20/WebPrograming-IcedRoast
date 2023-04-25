@@ -1,9 +1,6 @@
 <link rel="stylesheet" href=<?php echo _WEB_ROOT."/public/assets/css/detail.css";?>>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/draggable/1.1.0/draggable.min.css" integrity="sha512-HYdOyG3/fyA21iXzjLDlO1ogpAcwT8T/KTt6HXgAulDjs0iS8rxh/D9pCgV7n0UhjW67V0xv+m4NfbdU6a5NQg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/draggable/1.1.0/draggable.min.js" integrity="sha512-l3GtgIvngEGF+5HIT+mYJ0BSr2D9vy85HbI91zLdmAtioe0ZpCEBjFW83GKLp96kwO8OjK9XyIQ0z/T2UMOaxg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <div class="container mt-4 mb-4">
     <h6 class="container mx-2">
@@ -158,6 +155,7 @@
     </div>
 </div>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script>
     let radioBtns = document.querySelectorAll('input[name="size"]');
     let priceDisplay = document.querySelector('.product-price');
@@ -212,18 +210,3 @@
         });
     });
 </script>
-
-<!-- <?php
-    echo '<pre>'; print_r($data); echo '</pre>';
-?>
-<form method="post" action=<?php echo _WEB_ROOT."/product/addToCart"; ?>>
-    <input type="hidden" name="product_id" value=<?php echo $data['mainProduct']['id'];?>>
-    <select name="size">
-        <option value="S">S</option>
-        <option value="M">M</option>
-        <option value="L">L</option>
-    </select>
-    <input type="number" name="price" value=<?php echo $data['mainProduct']['price'];?>>
-    <input type="number" name="quantity" value=1>
-<button type="submit">Thêm vào giỏ hàng</button>
-</form> -->
