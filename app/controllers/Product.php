@@ -109,6 +109,7 @@ class Product extends Controller{
             $response = new Response();
             $response->reDirect('site/login');
         }
+        echo "Success";
         $request = new Request();
         if($request->isPost()){
             $product_id = $_POST['product_id'];
@@ -136,13 +137,6 @@ class Product extends Controller{
             //Cập nhật thông tin giỏ hàng trên header
             $quantity = $this->model['CartModel']->getCartQuantity($this->data['user']['id']);
             Session::data('cartQuantity',$quantity);
-
-            $this->data['sub_content']['mainProduct'] = $this->model['ProductModel']->getProductById($product_id);
-            $category = $this->data['sub_content']['mainProduct']['category'];
-            $this->data['sub_content']['relatedProduct'] = $this->model['ProductModel']->getByCategory($category);
-            $this->data["content"] = 'products/detail';
-            //Render view
-            $this->render('layouts/client_layout', $this->data);
         }
     }
 

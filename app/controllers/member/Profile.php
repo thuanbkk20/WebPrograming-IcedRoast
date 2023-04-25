@@ -115,11 +115,4 @@ class Profile extends Controller{
         $this->data["content"] = 'profile/change_password';
         $this->render('layouts/client_layout', $this->data);
     }
-
-    public function order(){
-        $this->data['page_title'] = "IcedRoast - Đơn hàng của bạn";
-        $this->data['sub_content']['user'] = $this->data['user'];
-        $this->data["content"] = 'profile/order';
-        $this->render('layouts/client_layout', $this->data);
-    }
 }
