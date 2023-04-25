@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
 <link rel="stylesheet" href=<?php echo _WEB_ROOT."/public/assets/css/news_style.css";?>>
-</head>
-<body>
 <div class="container1">
     
             
@@ -36,42 +31,30 @@
     </ul>
 </div>
 
-</body>
-</html>
-
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-lg-5 mx-auto" style="width: 92%;">
-<?php foreach($newsArr as $news){ ?>
-    <div class="col mb-4">
-      <a href="<?php echo $news['link']; ?>"> 
-        <div class="card shadow-sm h-100">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-lg-7 mx-auto" style="width: 92%;">
+  <?php foreach($newsArr as $blog){ ?>
+    <div class="col-lg-4 mb-4">
+    <a style="text-decoration: none;color:black;" href="<?php echo $blog['link']; ?>"> 
+        <div class="card shadow-sm h-100" style="border:none;">
           <!-- Featured image -->
-          
-          <div class="bg-image hover-overlay ripple rounded-top" data-mdb-ripple-color="light">
-            <img src="<?php echo $news['image']; ?>" class="card-img-top" style="width: 100%; height: 380px;" />
-            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+          <div class="d-flex flex-column">
+              <div class="bg-image hover-overlay ripple rounded-top" data-mdb-ripple-color="light">
+                  <img src="<?php echo $blog['image']; ?>" class="card-img-top" style="width: 100%; height: 380px;"/>
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </div>
+              <!-- Title -->
+              <div class=" titleCard mt-2  mb-1">
+                  <h5><?php echo $blog['title']; ?></h5>
+              </div>
+          </a>
+              <div class="mb-2">
+                  <span><?php echo $blog['description']; ?></span>
+              </div>
           </div>
 
-          <!-- Article data -->
-          <div class="card-body">
-            <div class="d-flex justify-content-start">
-              <a href="" class="text-info">
-                <i class="fas fa-plane"></i>
-                <?php echo $news['tag']; ?>
-              </a>
-              <u style="margin-left: 350px;">15.07.2020</u>
-            </div>
-
-            <!-- Article title and description -->
-            <h5 class="card-title"><?php echo $news['title']; ?></h5>
-            <p class="card-text"><?php echo $news['description']; ?></p>
           </div>
-        </div>
-      </a>
     </div>
-  
-    <?php } ?>
- 
-  
+  <?php } ?>
 </div>
 
 

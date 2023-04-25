@@ -94,7 +94,7 @@
                                                         echo "Giá sản phẩm";
                                                     echo "</div>";
                                                     echo '<div>';
-                                                        echo $item['price'];
+                                                        echo number_format($item['price'], 0, ",", ",") . "đ";
                                                     echo "</div>";
                                             echo "</div>";
 
@@ -179,7 +179,7 @@
                                             echo 'Tổng tiền hàng: ';                                           
                                         echo '</div>';
                                         echo '<div style="color:red">';
-                                            echo $totalPrice;                                           
+                                            echo number_format($totalPrice, 0, ",", ",")." đ";                                           
                                         echo '</div>';
                                     echo '</div>';
 
