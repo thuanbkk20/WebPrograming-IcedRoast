@@ -1,0 +1,132 @@
+.product-images {
+    position: relative;
+    overflow: hidden;
+}
+.product-images .thumbnail-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.product-images .thumbnail-images img {
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+}
+.product-images .thumbnail-images img.active-thumbnail {
+    border-color: #E57905;
+}
+.product-images:hover img {
+    transform: scale(1.1);
+}
+.product-info {
+    margin-top: 20px;
+}
+.product-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.product-description {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.product-nutrition {
+    margin-bottom: 20px;
+}
+.product-nutrition h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.product-nutrition ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.product-options label input {
+    margin-right: 10px;
+}
+.product-cart {
+    display: flex;
+    align-items: center;
+}
+.product-cart button {
+    background-color: #E57905;
+    border: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.social-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #ccc;
+    cursor: pointer;
+}
+.social-icons i:hover {
+    color: #E57905;
+}
+
+.card{border:none}
+.product{background-color: #fffaee}
+.brand{font-size: 13px}
+.act-price{color:#E57905;}
+.dis-price{text-decoration: line-through}
+.about{font-size: 14px}
+
+label.radio{cursor: pointer}
+label.radio 
+input{position: absolute;top: 0;left: 0;visibility: hidden;pointer-events: none}
+label.radio 
+
+span {
+    margin: 0.3rem 0 0.3rem 0;
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+    display: inline-block;
+    border-radius: 10px;
+}
+label.radio input:checked+span{
+    border-color: #E57905;
+    background-color: #E57905;
+    color: #fff
+}
+
+.related-product {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: -5px;
+    margin-right: -5px;
+    -webkit-overflow-scrolling: touch; /* tối ưu cho thiết bị di động */
+}
+
+.related-product::-webkit-scrollbar {
+    height: 0.5rem;
+}
+
+.related-product::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.related-product::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+  
+.related-product .col-lg-2 {
+    padding: 5px;
+    margin: 5px;
+    width: calc(16.666% - 20px);
+}
+  
+.related-product .card-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+

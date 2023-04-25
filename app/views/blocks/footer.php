@@ -1,50 +1,32 @@
 </hr>
 <!-- <h1>FOOTER</h1> -->
-<footer class="p-4 text-center text-lg-start text-muted" style="background-color: rgb(194, 241, 244); height: 400px;" >
+<footer class="p-4 text-center text-lg-start text-muted" style="background-color: #FEF3D7; height: 400px;" >
     <div class="container text-center text-md-start mt-5">
       <!-- Grid row -->
       <div class="row mt-3">
         <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-center">
           <!-- Content -->
-          <div class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i> 
-            <img
-            src=<?php echo _WEB_ROOT."/public/assets/images/logo_IcedRoast.png"; ?>
-            height="30"
-            weight="40"
-            alt="IcedRoastLogo"
-            loading="lazy"
-          />
-          Iced <br>
-          <i class="fas fa-gem me-3"></i> Roast
-          </div>
+          <img class="w-50" src=<?php echo _WEB_ROOT."/public/assets/images/logo_IcedRoast.png";?> alt="IcedRoastLogo" loading="lazy"/>
+
           <div class="mb-4">
             <!-- Facebook -->
             <a
               class="btn text-white btn-floating m-1"
               href="#!"
               role="button"
-              ><i class="fab fa-facebook-f"></i
-            >
+              ><i class="fab fa-facebook-f"></i>
             <img
             src=<?php echo _WEB_ROOT."/public/assets/images/facebook.png"; ?>
             height="30"
             weight="40"
             alt="IcedRoastLogo"
-            loading="lazy"
-          />
+            loading="lazy"/>
           </a>
       
             <!-- Twitter -->
-            <a
-              class="btn text-white btn-floating m-1"
-              href="#!"
-              role="button"
-              ><i class="fab fa-twitter"></i
-            >
-            <img
-            src=<?php echo _WEB_ROOT."/public/assets/images/twitter.png"; ?>
+          <a class="btn text-white btn-floating m-1" href="#!" role="button">
+            <img src=<?php echo _WEB_ROOT."/public/assets/images/twitter.png"; ?>
             height="30"
             weight="40"
             alt="IcedRoastLogo"
@@ -79,19 +61,19 @@
             Giới thiệu
           </h6>
           <p>
-            <a href="#!" class="text-reset">Về chúng tôi</a>
+            <a href="#!" class="text-reset text-decoration-none">Về chúng tôi</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Sự kiện</a>
+            <a href="#!" class="text-reset text-decoration-none">Sự kiện</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Cửa hàng</a>
+            <a href="#!" class="text-reset text-decoration-none">Cửa hàng</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Tuyển dụng</a>
+            <a href="#!" class="text-reset text-decoration-none">Tuyển dụng</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Chuyện cà phê</a>
+            <a href="#!" class="text-reset text-decoration-none">Chuyện cà phê</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -103,19 +85,19 @@
             Tiện ích nhanh
           </h6>
           <p>
-            <a href="#!" class="text-reset">Xem giỏ hàng</a>
+            <a href="#!" class="text-reset text-decoration-none">Xem giỏ hàng</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Sản phẩm yêu thích</a>
+            <a href="#!" class="text-reset text-decoration-none">Sản phẩm yêu thích</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Theo dõi đơn hàng</a>
+            <a href="#!" class="text-reset text-decoration-none">Theo dõi đơn hàng</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Xem bài viết</a>
+            <a href="#!" class="text-reset text-decoration-none">Xem bài viết</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Gọi điện tư vấn</a>
+            <a href="#!" class="text-reset text-decoration-none">Gọi điện tư vấn</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -169,8 +151,8 @@
       <!-- Grid row -->
     </div>
     <!-- Copyright -->
-  <div class="text-center text-dark p-3"  style="background-color: #dd4b39; ">
-    <a class="text-dark" href="https://mdbootstrap.com/">Copyright © 2023 ICED ROAST. All Rights Reserved. </a>
+  <div class="text-center p-3"  style="background-color: #E57905;">
+    <a class="text-dark text-decoration-none" href="https://mdbootstrap.com/"><i style="color: white">Copyright © 2023 ICED ROAST</i></a>
   </div>
 </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 

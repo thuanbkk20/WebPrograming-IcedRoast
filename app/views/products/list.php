@@ -103,7 +103,7 @@
                     endif;
                 ?>
                 <div class="col-lg-4 mb-4">
-                    <a href=<?php echo _WEB_ROOT."/product" ?> style="text-decoration:none;">
+                    <a href=<?php echo _WEB_ROOT."/product/detail?id=$product[id]"?> style="text-decoration:none;">
                         <div class="card shadow-sm">
                             <img src='<?= $product['image'] ?>' alt='<?= $product['name'] ?>' class="card-img-top rounded w-100 shadow-sm">
                             <div class="card-body text-center">
@@ -117,5 +117,7 @@
             </div>
         </div>
     </div>
+
+    <br>
 </body>
 </html>
