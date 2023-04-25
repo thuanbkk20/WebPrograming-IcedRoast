@@ -46,7 +46,7 @@ class m0001_initial{
             status varchar(30) NOT NULL default 'Chưa xác nhận',
             address varchar(200) NOT NULL,
             description varchar(300),
-            primary key (id, user_id, product_id)
+            primary key (id, user_id, product_id,price)
         );
 
         DROP TABLE IF EXISTS cart;
