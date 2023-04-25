@@ -1,6 +1,5 @@
 <link rel="stylesheet" href=<?php echo _WEB_ROOT."/public/assets/css/ad_list.css";?>>
 
-
 <div class="container row">
     <h3 class="col-lg-4">Quản lý sản phẩm</h3>
     <a class="col-lg-8 text-end text-decoration-none add-product" href=<?php echo _WEB_ROOT."/admin/ProductModify/create"; ?>>Thêm sản phẩm</a>
@@ -9,14 +8,14 @@
 <div class="container">
   <table class="table table-striped table-hover">
     <tr class="table-dark">
-      <th>Tên</th>
-      <th>Hình ảnh</th>
-      <th>Giá</th>
+      <th style="width: 15% !important;">Tên</th>
+      <th style="width: 10% !important;">Hình ảnh</th>
+      <th style="width: 5% !important;">Giá</th>
       <th>Mô tả</th>
-      <th>Tình trạng</th>
+      <th style="width: 10% !important;">Tình trạng</th>
       <th>Phân loại</th>
       <th>Size</th>
-      <th></th>
+      <th style="width: 11% !important;"></th>
     </tr>
     <?php
       foreach($productArr as $product){
