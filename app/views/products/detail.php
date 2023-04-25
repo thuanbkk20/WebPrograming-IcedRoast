@@ -117,7 +117,7 @@
                     </label>
                 </div>
                             
-                <input type="hidden" name="price" value="">
+                <input type="hidden" name="price" value=<?php echo $data['mainProduct']['price']; ?>>
 
                 <h4 class="mt-3 mb-3">Mô tả sản phẩm</h4>
                 <p>- <?php echo $data['mainProduct']['description'] ?></p>
