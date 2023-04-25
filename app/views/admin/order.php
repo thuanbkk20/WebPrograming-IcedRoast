@@ -7,21 +7,25 @@
 ?>
 <!-- Đừng xóa cái này -->
 <input type="hidden" id="webRoot" value=<?php echo _WEB_ROOT;?>>
-<table>
-  <tr>
-    <th>Mã đơn hàng</th>
-    <th>Mã người dùng</th>
-    <th>Thời gian đặt hàng</th>
-    <th>Địa chỉ</th>
-    <th>Tình trạng đơn hàng</th>
-    <th>Tình trạng thanh toán</th>
-    <th>Số lượng sản phẩm</th>
-    <th>Tổng giá</th>
-  </tr>
+<div class="table-responsive">
+<table  class="table table-secondary table-hover table-striped align-middle">
+  <thead style="text-align:center;">
+    <tr class="table-active table-danger">
+      <th scope="col">Mã đơn hàng</th>
+      <th scope="col">Mã người dùng</th>
+      <th scope="col">Thời gian đặt hàng</th>
+      <th scope="col">Địa chỉ</th>
+      <th scope="col">Tình trạng đơn hàng</th>
+      <th scope="col">Tình trạng thanh toán</th>
+      <th scope="col">Số lượng sản phẩm</th>
+      <th scope="col">Tổng giá</th>
+    </tr>
+  </thead>
+  <tbody style="text-align:center;">
   <?php
     foreach($orderArr as $order){
-        echo '<tr>';
-        echo '<td>'.$order['id'].'</td>';
+        echo '<tr class="table-primary">';
+        echo '<th scope="row">'.$order['id'].'</th>';
         echo '<td>'.$order['user_id'].'</td>';
         echo '<td>'.$order['time'].'</td>';
         echo '<td>'.$order['address'].'</td>';
@@ -49,15 +53,19 @@
         echo '</td>';
         echo '<td>'.$order['quantity'].'</td>';
         echo '<td>'.$order['price'].'</td>';
+        echo '</tr>';
     }
   ?>
+  </tbody>
 </table>
-<?php
-  if(isset($curPage)&&(int)$curPage>1){
-    echo "<a href = "._WEB_ROOT."/admin/OrderModify?page=".($curPage-1).">Previous</a>";
-  }else{
-    echo "<a href='#'>Previous</a>";
-  }
+</div>
+<!-- <?php
+ if(isset($curPage)&&(int)$curPage>1){
+  echo "<a href = "._WEB_ROOT."/admin/OrderModify?page=".($curPage-1).">Previous</a>";
+}
+else{
+  echo "<a href='#'>Previous</a>";
+}
   for($page = 1; $page<= $number_of_page; $page++) {
     echo "<a href = "._WEB_ROOT."/admin/OrderModify?page=".$page.">".$page."</a>";
   }
@@ -66,8 +74,47 @@
   }else{
     echo "<a href='#'>Next</a>";
   }
-?>
-
+?> -->
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-end">
+    <li class="page-item">
+      <?php 
+      if(isset($curPage)&&(int)$curPage>1){
+        echo '<a class="page-link" href = '._WEB_ROOT.'/admin/OrderModify?page='.($curPage-1).'>';
+        echo 'Previous';
+        echo '</a>';
+      }
+      else{
+        echo '<a class="page-link" page href="#">';
+        echo 'Previous';
+        echo '</a>';
+      }
+      ?>
+    </li>
+    <li class="page-item">
+      <?php  
+      for($page = 1; $page<= $number_of_page; $page++) {
+            echo '<a class="page-link" href = '._WEB_ROOT.'/admin/OrderModify?page='.$page.'>';
+            echo $page;
+            echo '</a>';
+          }
+     ?>
+    </li>
+    <li class="page-item">
+          <?php 
+            if(isset($curPage)&&(int)$curPage<$number_of_page){
+              echo '<a class="page-link" href = '._WEB_ROOT.'/admin/OrderModify?page='.($curPage+1).'>';
+              echo 'Next';
+              echo '</a>';
+            }else{
+              echo '<a class="page-link" href="#">';
+              echo 'Next';
+              echo '</a>';
+            }
+          ?>
+    </li>
+  </ul>
+</nav>  
 <script>
     $(document).ready(function(){
         var webRoot = $("#webRoot").val()

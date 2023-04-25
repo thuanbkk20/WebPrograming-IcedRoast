@@ -20,7 +20,7 @@
                         <a href=<?php echo _WEB_ROOT.'/member/cart/delete?id='.$item['id'];?>>                 
                             <img
                             src="<?php echo _WEB_ROOT."/public/assets/images/delete.png";?>" 
-                            style="height: auto; width: 40%;"
+                            style="height: auto; width: 25%;"
                             alt="arrow"
                             loading="lazy"
                             />
@@ -37,29 +37,17 @@
                 <div class="d-flex justify-content-between mb-3">
                     <div>
                             <div class="d-flex flex-row">
-                                <div style="border:1px solid black;">
+                                <div style="border:1px solid black;width:20px;" class="text-center">
                                 <a href=<?php echo _WEB_ROOT.'/member/cart/updateQuantity?id='.$item['id'].'&sign=-';?> 
                                 style="text-decoration-line:none;">
-                                <img
-                                    src="<?php echo _WEB_ROOT."/public/assets/images/minus.png";?>" 
-                                    class="rounded-circle"
-                                    height="15"
-                                    alt="Black and White Portrait of a Man"
-                                    loading="lazy"
-                                    />
+                                -
                                 </a>
                                 </div>
                                 <div style="border:1px solid black;width:25px; background-color: #FFEFD5" class="item_quantity text-center"><?php echo $item['quantity']; ?> </div>
-                                <div style="border:1px solid black;">
+                                <div style="border:1px solid black; width:20px;" class="text-center">
                                 <a href=<?php echo _WEB_ROOT.'/member/cart/updateQuantity?id='.$item['id'].'&sign=+';?>
                                 style="text-decoration-line:none;">
-                                    <img
-                                    src="<?php echo _WEB_ROOT."/public/assets/images/add.png";?>" 
-                                    class="rounded-circle"
-                                    height="15"
-                                    alt="Black and White Portrait of a Man"
-                                    loading="lazy"
-                                    />
+                                    +
                                 </a>
                                 </div>
                             </div>
@@ -150,7 +138,7 @@
                     <a href="<?php echo _WEB_ROOT."/product"; ?>" style="text-decoration:none;">
                     <img
                     src="<?php echo _WEB_ROOT."/public/assets/images/return.png";?>" 
-                    style="height: auto; width: 5%;"
+                    style="height: auto; width: 5% !important;"
                     alt="arrow"
                     loading="lazy"
                     />
