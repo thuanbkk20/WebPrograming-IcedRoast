@@ -13,7 +13,8 @@
             </div>
                 <div class="d-flex flex-column pe-2"> 
                     <div class="pb-2"><?php echo $user['username'];?></div>
-                    <div>                
+                    <div>
+                        <a href=></a>               
                     <img
                     src="<?php echo _WEB_ROOT."/public/assets/images/pen.png";?>" 
                   class="rounded-circle"

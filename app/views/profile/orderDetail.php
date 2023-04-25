@@ -81,7 +81,9 @@
                             $totalPrice += $item['price']*$item['quantity'];
                             echo '<div class="row p-2" style="border-top:1px solid black"> ';
                                 echo '<div class="col-lg-3 col-md-3 col-sm-6">';
-                                    echo "<img src='".$item["image"]."' style='width:90%;height:150px;'>";
+                                    echo '<a href='._WEB_ROOT.'/product/detail?id='.$item['product_id'].'>';
+                                        echo "<img src='".$item["image"]."' style='width:90%;height:150px;'>";
+                                    echo '</a>';
                                 echo '</div>';
                                 echo '<div class="col-lg-9 col-md-9 col-sm-6">';
                                    echo '<div class="d-flex flex-column justify-content-start">';

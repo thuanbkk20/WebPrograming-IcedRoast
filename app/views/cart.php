@@ -7,10 +7,13 @@
            <span id="inforCart"></span>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-6">
-            <div class="row mb-4 p-2" style="border-bottom:1px solid black;">
+            <div class="row mb-4">
             <?php foreach($cart as $item){ ?>
-            <div class="col-lg-3 col-md-3 col-sm-4"><?php 
-            echo "<img src='".$item["image"]."' style='width:90%;height:150px;'>" ?>
+            <div class="col-lg-3 col-md-3 col-sm-4 p-2"><?php 
+            echo '<a href='._WEB_ROOT.'/product/detail?id='.$item['product_id'].'>';
+            echo "<img src='".$item["image"]."' style='width:90%;height:150px;'>";
+            echo '</a>';
+             ?>
             </div>
             <div class="col-lg-9 col-md-9 col-sm-8 ms-0 ps-0" >
             <div class="d-flex flex-column justify-content-start mt-2">
