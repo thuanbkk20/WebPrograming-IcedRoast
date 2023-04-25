@@ -1,65 +1,50 @@
-<div class="container-fluid" style="background-color: rgb(245,245,245);">
-    <div class="row g-0 page-body mx-1 p-2 ">
-        <div class="col-lg-3 col-md-3 col-sm-2 mt-0 ms-3">
-            <div class="d-flex flex-row mb-3 col-12">
-            <div class="pe-3">                  
-                <img
-                  src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                  class="rounded-circle"
-                  height="50"
-                  alt="Black and White Portrait of a Man"
-                  loading="lazy"
-                />
-            </div>
-                <div class="d-flex flex-column pe-2"> 
-                    <div class="pb-2"><?php echo $user['username'];?></div>
-                    <div>
-                        <a href=></a>               
-                    <img
-                    src="<?php echo _WEB_ROOT."/public/assets/images/pen.png";?>" 
-                  class="rounded-circle"
-                  height="20"
-                  alt="Black and White Portrait of a Man"
-                  loading="lazy"
-                /> Sửa hồ sơ</div>
+<link rel="stylesheet" href=<?php echo _WEB_ROOT."/public/assets/css/nav.css";?>>
+
+<br><br>
+<div class="row gy-4">  
+    <div class="col-12 col-lg-3 border-end">
+        <div class="sidebar">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex flex-column align-items-center text-center">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                        <div class="mt-3">
+                            <h4><?php echo $user['last_name']." ".$user['first_name'];?></h4>
+                            <p class="text-secondary mb-1"><?php echo $user['phone_number'];?></p>
+                        </div>
+                    </div>
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href=<?php echo _WEB_ROOT."/member/profile"; ?> class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#cafe-submenu" aria-expanded="false" aria-controls="cafe-submenu">
+                                Tài khoản của tôi
+                            </a>
+                            <ul class="collapse submenu" id="cafe-submenu">
+                                <li><a class="text-decoration-none text-body" href=<?php echo _WEB_ROOT."/member/profile"; ?>>Hồ sơ</a></li>
+                                <li><a class="text-decoration-none text-body" href=<?php echo _WEB_ROOT."/member/profile/change_password"; ?>>Đổi mật khẩu</a></li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item">
+                            <a href=<?php echo _WEB_ROOT."/member/order"; ?> class="sidebar-link">
+                                Đơn mua
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href=<?php echo _WEB_ROOT."/member/cart"; ?> class="sidebar-link">
+                                Giỏ hàng
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="d-flex flex-column mb-3 col-12">
-                <ul class="list-group">
-                    <li class="list-group-item">
-                    <a href=<?php echo _WEB_ROOT."/member/profile"; ?> class="sidebar-link" data-bs-toggle="collapse" data-bs-target="#cafe-submenu" aria-expanded="false" aria-controls="cafe-submenu">
-                        Tài khoản của tôi
-                    </a>
-                    <ul class="list-unstyled collapse" id="cafe-submenu">
-                        <li><a href=<?php echo _WEB_ROOT."/member/profile"; ?>>Hồ sơ</a></li>
-                        <li><a href=<?php echo _WEB_ROOT."/member/profile/change_password"; ?>>Đổi mật khẩu</a></li>
-                    </ul>
-                    </li>
-                    <li class="list-group-item">
-                    <a href=<?php echo _WEB_ROOT."/member/order"; ?> class="sidebar-link">
-                        Đơn mua
-                    </a>
-                    </li>
-                    <li class="list-group-item">
-                    <a href=<?php echo _WEB_ROOT."/member/cart"; ?> class="sidebar-link">
-                        Giỏ hàng
-                    </a>
-                    </li>
-                </ul>
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script>
-                $(document).ready(function() {
-                    $('.sidebar .list-group-item').on('click', function() {
-                        $(this).toggleClass('active').siblings().removeClass('active');
-                        $(this).next('.sub-menu').slideToggle(200).siblings('.sub-menu').slideUp(200);
-                    });
-                });
-            </script>
-            </div>
         </div>
-        <div class="col-lg-8 col-md-8 col-sm-10 mt-0 ms-4 p-3" style="background-color: rgb(255,255,255);">
-            <div class="d-flex flex-column">
-                    <div class="d-block mb-3">
+    </div>
+
+    <div class="col-12 col-lg-9">
+        <div class="card mb-3">
+            <div class="card-body m-5">
+                <div class="d-block mb-3">
+                <div class="d-block mb-3">
                         <h2 class="d-block fw-bold">Đơn hàng của tôi</h2>
                         <span style="font-style:italic;">Nếu bạn có thắc gì về đơn hàng, vui lòng cho chúng tôi biết qua trang 
                         <a href="<?php echo _WEB_ROOT."/contact"; ?>" style="text-decoration:none;">liên hệ!</a></span>
@@ -82,7 +67,7 @@
                                     $totalPrice += $orderArr[$i]['price']*$orderArr[$i]['quantity'];
                                 }
                                 else{
-                                    echo '<div class="p-2" style="border-bottom:1px solid black;">
+                                    echo '<div class="p-2 border-bottom">
                                     <div class="mb-2">
                                     <h4 style="font-style:italic; color:grey">Đơn hàng số '.$my_id.'</h4>';
                                     echo '<span><a style="text-decoration:none;" href='._WEB_ROOT.'/member/order/orderDetail?order_id='.$my_id.'>Xem chi tiết đơn hàng</a></span></div>';
@@ -155,7 +140,9 @@
                         }
                     }  
                     ?>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<br>
