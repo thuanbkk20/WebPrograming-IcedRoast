@@ -85,16 +85,16 @@
             Tiện ích nhanh
           </h6>
           <p>
-            <a href="#!" class="text-reset text-decoration-none">Xem giỏ hàng</a>
+            <a href="<?php echo _WEB_ROOT.'/member/cart'?>" class="text-reset text-decoration-none">Xem giỏ hàng</a>
           </p>
           <p>
             <a href="#!" class="text-reset text-decoration-none">Sản phẩm yêu thích</a>
           </p>
           <p>
-            <a href="#!" class="text-reset text-decoration-none">Theo dõi đơn hàng</a>
+            <a href="<?php echo _WEB_ROOT.'/member/order'?>" class="text-reset text-decoration-none">Theo dõi đơn hàng</a>
           </p>
           <p>
-            <a href="#!" class="text-reset text-decoration-none">Xem bài viết</a>
+            <a href="<?php echo _WEB_ROOT.'/news'?>" class="text-reset text-decoration-none">Xem bài viết</a>
           </p>
           <p>
             <a href="#!" class="text-reset text-decoration-none">Gọi điện tư vấn</a>
