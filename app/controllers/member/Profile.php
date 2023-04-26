@@ -100,7 +100,7 @@ class Profile extends Controller{
                 $new_user['password'] = password_hash($_POST['password'], PASSWORD_BCRYPT);
 
                 //Update user
-                $this->model['userModel']->updateUser($new_user);
+                $this->model['userModel']->updateUser(Session::data('user_id') ,$new_user);
 
                 $message = "Bạn đã thay đổi mật khẩu thành công!";
                 // Generate the JavaScript code for the popup alert and redirect
