@@ -1,6 +1,6 @@
 </hr>
 <!-- <h1>FOOTER</h1> -->
-<footer class="p-4 text-center text-lg-start text-muted" style="background-color: #FEF3D7; height: 400px;" >
+<footer class="p-4 text-center text-lg-start text-muted" style="background-color: #FEF3D7;" >
     <div class="container text-center text-md-start mt-5">
       <!-- Grid row -->
       <div class="row mt-3">
