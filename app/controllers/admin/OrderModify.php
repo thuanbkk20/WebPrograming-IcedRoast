@@ -41,30 +41,34 @@ class OrderModify extends Controller{
         //Biến này có các record là mảng các sản phẩm trong đơn hàng
         $orderArr = array_slice($data,$page_first_result,$results_per_page);
         $data = [];
+
         foreach($orderArr as $key=>$order){
-            $id = $order[0]['id'];
-            $user_id = $order[0]['user_id'];
-            $time = $order[0]['order_date'];
-            $address = $order[0]['address']; 
-            $status = $order[0]['status']; 
-            $payment_status = $order[0]['payment_status'];
-            $description = $order[0]['description'];
-            $quantity = 0;
-            $price = 0;
-            for($i=0; $i<count($order); $i++){
-                $quantity += (int)$order[$i]['quantity'];
-                $price += (int)$order[$i]['quantity']*(int)$order[$i]['price'];
+            if(isset($order[0])){
+                $id = $order[0]['id'];
+                $user_id = $order[0]['user_id'];
+                $time = $order[0]['order_date'];
+                $address = $order[0]['address']; 
+                $status = $order[0]['status']; 
+                $payment_status = $order[0]['payment_status'];
+                $description = $order[0]['description'];
+                $quantity = 0;
+                $price = 0;
+                for($i=0; $i<count($order); $i++){
+                    $quantity += (int)$order[$i]['quantity'];
+                    $price += (int)$order[$i]['quantity']*(int)$order[$i]['price'];
+                }
+                $data[$key]['id'] = $id;
+                $data[$key]['user_id'] = $user_id;
+                $data[$key]['time'] = $time;
+                $data[$key]['address'] = $address;
+                $data[$key]['status'] = $status;
+                $data[$key]['payment_status'] = $payment_status;
+                $data[$key]['quantity'] = $quantity;
+                $data[$key]['price'] = $price;
+                $data[$key]['description'] = $description;
             }
-            $data[$key]['id'] = $id;
-            $data[$key]['user_id'] = $user_id;
-            $data[$key]['time'] = $time;
-            $data[$key]['address'] = $address;
-            $data[$key]['status'] = $status;
-            $data[$key]['payment_status'] = $payment_status;
-            $data[$key]['quantity'] = $quantity;
-            $data[$key]['price'] = $price;
-            $data[$key]['description'] = $description;
-        }
+        }       
+
 
         if(isset($_GET['page'])){
             $this->data['sub_content']['curPage'] = $_GET['page'];

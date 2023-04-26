@@ -64,22 +64,6 @@
   </tbody>
 </table>
 </div>
-<!-- <?php
- if(isset($curPage)&&(int)$curPage>1){
-  echo "<a href = "._WEB_ROOT."/admin/OrderModify?page=".($curPage-1).">Previous</a>";
-}
-else{
-  echo "<a href='#'>Previous</a>";
-}
-  for($page = 1; $page<= $number_of_page; $page++) {
-    echo "<a href = "._WEB_ROOT."/admin/OrderModify?page=".$page.">".$page."</a>";
-  }
-  if(isset($curPage)&&(int)$curPage<$number_of_page){
-    echo "<a href = "._WEB_ROOT."/admin/OrderModify?page=".($curPage+1).">Next</a>";
-  }else{
-    echo "<a href='#'>Next</a>";
-  }
-?> -->
 
 <div class="text-end my-3 mx-3">
   <?php
@@ -103,22 +87,4 @@ else{
   ?>
 </div>
 
-<script>
-  $(document).ready(function(){
-    var webRoot = $("#webRoot").val()
-    $('.status').on('change', function() {
-      var id = $(this).attr("id");
-      var value = this.value;
-      $.ajax({url:webRoot+'/admin/OrderModify/status?id='+id+'&status='+value,success: function(result){
-          console.log(result)
-      }});
-    });
-    $('.payment_status').on('change', function() {
-      var id = $(this).attr("id");
-      var value = this.value;
-      $.ajax({url:webRoot+'/admin/OrderModify/paymentStatus?id='+id+'&paymentStatus='+value,success: function(result){
-          console.log(result)
-      }});
-    });
-  });
-</script>
+<script type="text/javascript" src=<?php echo _WEB_ROOT."/public/assets/js/order.js";?>></script>
