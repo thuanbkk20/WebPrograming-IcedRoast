@@ -85,8 +85,6 @@
     </div>
   </div>
 
-
-
   <div class="row" style="background-image: linear-gradient(to right, #FFD700, #FFA500); height: 100vh;">
     <div class="col-1"></div>
     <div class="col-5 d-flex justify-content-start align-items-center">
