@@ -74,7 +74,7 @@
                     class="btn btn-block btn-lg gradient-custom-4" style="background-color: rgb(111, 78, 55); color: white;">Đăng ký</button>
                 </div>
 
-                <p class="text-center text-muted mt-5 mb-0">Bạn đã có tài khoản? <a href="#!"
+                <p class="text-center text-muted mt-5 mb-0">Bạn đã có tài khoản? <a href="<?php echo _WEB_ROOT; ?>/site/login"
                     class="fw-bold text-body">Đăng nhập tại đây</u></a></p>
               </form>
             </div>
