@@ -5,7 +5,7 @@
 
     <div class="col-lg-8 text-middle">
         <h1 class="d-flex justify-content-between">Chỉnh sửa sản phẩm</h1>
-        <form class="p-4 border rounded mx-auto" method="post" action="<?php echo _WEB_ROOT.'/admin/ProductModify/create';?>" style="background-color: #FEF3D7">
+        <form class="p-4 border rounded mx-auto" method="post" action="<?php echo _WEB_ROOT.'/admin/ProductModify/update';?>" style="background-color: #FEF3D7">
             <!-- form content -->
             <div>
                 <span >
