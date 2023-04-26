@@ -23,7 +23,7 @@ class contact extends Controller{
                 'fullname' => 'required|max:50',
                 'phonenumber' => 'required|length:10',
                 'email' => 'required|email|min:7',
-                'detail' => 'required|min:20'
+                'detail' => 'required|min:20|max:500'
             ]);
 
             //set message
@@ -37,6 +37,7 @@ class contact extends Controller{
                 'email.min' => 'Email phải lớn hơn 7 ký tự',
                 'detail.required' => 'Lời nhắn không được để trống',
                 'detail.min'  => 'Lời nhắn phải lớn hơn 20 ký tự',
+                'detail.max'  => 'Lời nhắn phải ít hơn 500 ký tự'
             ]);
 
             //validate
