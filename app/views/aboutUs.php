@@ -105,26 +105,5 @@
   </div>
 </div>
 
-<script>
-  // Lấy đối tượng chữ
-  const text = document.querySelector('.fly-in-text');
 
-  // Chuyển text thành mảng các chữ cái
-  const letters = text.textContent.split('');
-
-  // Thay đổi nội dung của text thành một mảng các span chứa từng chữ cái
-  text.textContent = '';
-  for (let i = 0; i < letters.length; i++) {
-    text.innerHTML += '<span class="fly-in-text">' + letters[i] + '</span>';
-  }
-
-  // Tạo một mảng các đối tượng span chứa các chữ cái
-  const spans = text.querySelectorAll('.fly-in-text');
-
-  // Lặp qua các đối tượng span và áp dụng animation ngẫu nhiên cho từng chữ cái
-  for (let i = 0; i < spans.length; i++) {
-    const randomDelay = Math.random() * 1000; // Tạo độ trễ ngẫu nhiên
-    spans[i].style.animationDelay = randomDelay + 'ms'; // Áp dụng độ trễ
-  }
-</script>
 

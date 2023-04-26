@@ -19,7 +19,6 @@
         $this->render('blocks/adminNav', $adminContent);
         $this->render('blocks/footer');
     ?>
-
     <script type="text/javascript" src="/public/assets/js/script.js"></script>
 </body>
 </html>
