@@ -5,7 +5,7 @@
         <h4 class="fw-bold mb-2">Chuyện nhà</h4>
       </div>
       <div class="mb-2  justify-content-center">
-        <span class="text-align-justify "> The Coffee House sẽ là nơi mọi người xích lại gần nhau,
+        <span class="text-align-justify "> The IcedRoast sẽ là nơi mọi người xích lại gần nhau,
            đề cao giá trị kết nối con người và sẻ chia thân tình bên những tách cà phê, 
            ly trà đượm hương, truyền cảm hứng về lối sống hiện đại.</span>
       </div>
