@@ -66,6 +66,7 @@ class Order extends Controller{
             $order_id = $_GET['order_id'];
             $data = $this->model['OrderModel']->getOrder($order_id);
             $this->data["sub_content"]['orderInfo'] = $data;
+            $this->data['sub_content']['user'] = $this->data['user'];
             $this->data["content"] = 'profile/orderDetail';
             $this->render('layouts/client_layout', $this->data);
         }else{
