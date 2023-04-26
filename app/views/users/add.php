@@ -71,7 +71,7 @@
                 <label for="password">Xác nhận mật khẩu</label>
                 <input type="password" id="repeatpassword" name="confirm_password" placeholder="Nhập lại mật khẩu" class="form-control" 
                 value="<?php echo (empty($old['confirm_password'])?false:$old['confirm_password']);?>"/>
-                <span >
+                <span class="text-danger">
             <?php echo (empty($errors['confirm_password'])?false:$errors['confirm_password']); ?>
             </span>
             </div>
