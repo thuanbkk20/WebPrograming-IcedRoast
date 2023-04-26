@@ -62,15 +62,6 @@ class m0001_initial{
             primary key (id)
         );
 
-        DROP TABLE IF EXISTS payment;
-        CREATE TABLE payment(
-            id INT AUTO_INCREMENT,
-	        method varchar(50) not null,
-	        price int not null,
-            order_id INT not null,
-            primary key (id)
-        );
-
         DROP TABLE IF EXISTS news;
         CREATE TABLE news(
             id INT AUTO_INCREMENT,
@@ -79,13 +70,6 @@ class m0001_initial{
             description varchar(1000) not null,
             link varchar(200) not null,
             tag varchar(50) not null,
-            primary key (id)
-        );
-
-        DROP TABLE IF EXISTS category;
-        CREATE TABLE category(
-            id INT AUTO_INCREMENT,
-	        name varchar(50) not null,
             primary key (id)
         );
         
