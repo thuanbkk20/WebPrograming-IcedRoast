@@ -16,7 +16,7 @@
             <!-- form content -->
             <div class="row">
                 <div class="form-group mb-4 col-6">
-                    <label for="name">Họ</label>
+                    <label for="name">Họ và tên đệm</label>
                     <input type="text" id="name" name="last_name" class="form-control" 
                     value="<?php echo (!empty($old['last_name'])?$old['last_name']:$userToUpdate['last_name']);?>"/>
                     <span class="text-danger">

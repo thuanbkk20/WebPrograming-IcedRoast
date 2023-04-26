@@ -169,7 +169,7 @@ class UserModify extends Controller{
                 $new_user['phone_number'] = trim($_POST['phone_number']);
                 $new_user['role'] = trim($_POST['role']);
                 $new_user['password'] = password_hash(trim($_POST['password']), PASSWORD_BCRYPT);
-                //Tạo user mới
+                //Cập nhật thông tin user
                 $this->model['userModel']->updateUser($_POST['id'],$new_user);
 
                 $message = "Bạn đã cập nhật thông tin cho người dùng thành công, chuyển đến trang quản lí?";

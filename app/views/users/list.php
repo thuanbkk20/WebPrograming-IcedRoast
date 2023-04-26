@@ -16,7 +16,7 @@
         <th scope="col">Tên tài khoản</th>
         <th scope="col">SĐT</th>
         <th scope="col">Vai trò</th>
-        <th scope="col">Chức năng</th>           
+        <th scope="col" style="width:13%!important;">Chức năng</th>           
         </tr>
     </thead>
     <tbody>
