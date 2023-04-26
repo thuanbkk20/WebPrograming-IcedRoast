@@ -25,13 +25,13 @@
               </li>
               <li>
               <a href=<?php echo _WEB_ROOT."/news/teaholic";?> class="sidebar-link">
-                  <button class="filter_button active">TeaHolic</button>
+                  <button class="filter_button orange active">TeaHolic</button>
               </a>
                   
               </li>
               <li>
               <a href=<?php echo _WEB_ROOT."/news/blog";?> class="sidebar-link">
-                  <button class="filter_button orange active">Blog</button>
+                  <button class="filter_button active">Blog</button>
               </a>                  
               </li>              
           </ul>

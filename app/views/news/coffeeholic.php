@@ -19,7 +19,7 @@
               </li>
               <li>
               <a href=<?php echo _WEB_ROOT."/news/coffeeholic";?> class="sidebar-link">
-                  <button class="filter_button active">CoffeeHolic</button>
+                  <button class="filter_button orange active">CoffeeHolic</button>
               </a>
                   
               </li>
@@ -31,7 +31,7 @@
               </li>
               <li>
               <a href=<?php echo _WEB_ROOT."/news/blog";?> class="sidebar-link">
-                  <button class="filter_button orange active">Blog</button>
+                  <button class="filter_button  active">Blog</button>
               </a>                  
               </li>              
           </ul>

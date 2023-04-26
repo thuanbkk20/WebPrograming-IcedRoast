@@ -13,7 +13,7 @@
           <ul class="page_tabs">
               <li>
               <a href=<?php echo _WEB_ROOT."/news";?> class="sidebar-link">
-                  <button class="filter_button active">Tất cả</button>
+                  <button class="filter_button orange active">Tất cả</button>
               </a>
                   
               </li>
@@ -31,7 +31,7 @@
               </li>
               <li>
               <a href=<?php echo _WEB_ROOT."/news/blog";?> class="sidebar-link">
-                  <button class="filter_button orange active">Blog</button>
+                  <button class="filter_button active">Blog</button>
               </a>                  
               </li>              
           </ul>
