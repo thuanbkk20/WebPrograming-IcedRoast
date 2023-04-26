@@ -1,1 +1,7 @@
-/* DEP TRAI THI MOI CO NHIEU DUA YEU */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:wght@200;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}

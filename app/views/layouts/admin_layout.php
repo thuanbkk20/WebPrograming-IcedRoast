@@ -12,12 +12,14 @@
 </head>
 <body>
     <?php
+        $adminContent['user'] = $user;
+        $adminContent['content'] = $content;
+        $adminContent['sub_content'] = $sub_content;
         $this->render('blocks/header', $user);
-        $this->render('blocks/adminNav');
-        $this->render($content, $sub_content);
+        $this->render('blocks/adminNav', $adminContent);
         $this->render('blocks/footer');
     ?>
 
-    <script type="text/javascript"  src="/public/assets/js/script.js"></script>
+    <script type="text/javascript" src="/public/assets/js/script.js"></script>
 </body>
 </html>

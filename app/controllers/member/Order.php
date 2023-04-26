@@ -68,6 +68,7 @@ class Order extends Controller{
             $this->data["sub_content"]['orderInfo'] = $data;
             $this->data['sub_content']['user'] = $this->data['user'];
             $this->data["content"] = 'profile/orderDetail';
+            $this->data['sub_content']['user'] = $this->data['user'];
             $this->render('layouts/client_layout', $this->data);
         }else{
             $reponse->reDirect('loadError');

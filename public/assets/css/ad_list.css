@@ -3,3 +3,49 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.add-product {
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.add-product:hover {
+    color: #EC8A36;
+}
+
+.product-title-sm {
+    font-size: 14px;
+}
+
+.product-description-sm {
+    font-size: 14px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 2px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-update {
+    background-color: #EC8A36;
+    border: none;
+}
+
+.btn-delete {
+    background-color: #95000f;
+    border: none;
+}
+
+.num-page
+{
+    color: #000000;
+}

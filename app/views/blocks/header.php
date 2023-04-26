@@ -1,5 +1,5 @@
     <!-- navbar -->
-<nav class="navbar navbar-expand-sm navbar-light"  style="background-color: rgb(194, 241, 244)">
+<nav class="navbar navbar-expand-sm navbar-light"  style="background-color: #FEF3D7">
   <div class="container">
       <!-- Toggle button -->
       <button
@@ -77,10 +77,10 @@
           </li>
       </ul>
         <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             <?php if(isset($first_name)) echo $first_name; else echo "User name";?>
             <img
-            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+            src="https://bootdey.com/img/Content/avatar/avatar7.png"
             class="rounded-circle"
             height="25"
             alt="Black and White Portrait of a Man"
