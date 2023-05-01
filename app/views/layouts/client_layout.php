@@ -11,11 +11,11 @@
     <title><?php if(isset($page_title)) echo $page_title; else echo 'IcedRoast'; ?></title>
 </head>
 <body>
+    <input type="hidden" id="loginFlag" value=<?php  echo (isset($user['id']))?$user['id']:0;  ?>>
     <?php
         $this->render('blocks/header', $user);
         $this->render($content, $sub_content);
         $this->render('blocks/footer');
     ?>
-    <script type="text/javascript"  src="/public/assets/js/script.js"></script>
 </body>
 </html>

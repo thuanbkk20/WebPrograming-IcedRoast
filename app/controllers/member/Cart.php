@@ -5,7 +5,7 @@ class Cart extends Controller{
     public function __construct(){
         $this->model['CartModel'] = $this->model("CartModel");
         $this->model['userModel'] = $this->model("UserModel");
-        $data['user'] = [];
+        $this->data['user'] = [];
         //Lấy user để hiện thông tin trên header
         if(Session::data('user_id')!=null){
             $this->db = new Database();
@@ -57,4 +57,5 @@ class Cart extends Controller{
         $reponse = new Response();
         $reponse->reDirect('member/cart');
     }
+
 }

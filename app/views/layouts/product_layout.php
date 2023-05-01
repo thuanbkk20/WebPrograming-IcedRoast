@@ -16,6 +16,5 @@
         $this->render($content, $sub_content);
         $this->render('blocks/footer');
     ?>
-    <script type="text/javascript"  src="/public/assets/js/script.js"></script>
 </body>
 </html>

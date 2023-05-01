@@ -52,11 +52,15 @@ $(document).ready(function(){
 
     $('#addtoCart').on("click", function(){
         let quantity = $("#quantity").val();
+        let loginFlag = $("#loginFlag").val();
+        let webRoot = $('#webRoot').val();
+        if(loginFlag==0){
+            window.location.replace(webRoot+'/site/login');
+        }
         if(Number(quantity)<=0){
             $("#quantityError").html("Số lượng sản phẩm phải lớn hơn 0");
         }else{
             $("#quantityError").html("");
-            let webRoot = $('#webRoot').val();
             let selectedSize = document.querySelector('input[type="radio"][name="size"]:checked');
             let size = selectedSize.getAttribute('value');
             let price = $('#totalPrice').val();
@@ -74,7 +78,7 @@ $(document).ready(function(){
                 },                  
                 success: function(result)         
                 {
-                    console.log(result)
+                    console.log("Add to cart successfully")
                     //Cập nhật lại giỏ hàng trên header
                     newQuantity = Number(quantity)+Number(currentQuantity);
                     $("#cartQuantity").html(newQuantity);
